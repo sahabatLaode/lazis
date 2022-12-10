@@ -113,7 +113,7 @@ class UserLainnya extends StatelessWidget {
               padding: const EdgeInsets.only(
                 left: 24,
                 right: 24,
-                top: 32,
+                top: 24,
                 bottom: 106.8,
               ),
               decoration: BoxDecoration(
@@ -129,7 +129,38 @@ class UserLainnya extends StatelessWidget {
                 ),
                 color: kLavenderBlushColor,
               ),
-              child: Column(),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 24),
+                            width: 24,
+                            child: Image.asset('assets/icon_profil.png'),
+                          ),
+                          Text(
+                            'Profil',
+                            style: yankeesStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.chevron_right),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
