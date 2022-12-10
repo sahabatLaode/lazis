@@ -94,15 +94,15 @@ class UserLainnya extends StatelessWidget {
               margin: const EdgeInsets.only(left: 148),
               child: TextButton(
                 onPressed: () {},
-                child: Text(
-                  "Lengkapi profil",
-                  style: culturedStyle,
-                ),
                 style: TextButton.styleFrom(
                   backgroundColor: kBlueColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
+                ),
+                child: Text(
+                  "Lengkapi profil",
+                  style: culturedStyle,
                 ),
               ),
             ),
@@ -114,7 +114,7 @@ class UserLainnya extends StatelessWidget {
                 left: 24,
                 right: 24,
                 top: 24,
-                bottom: 106.8,
+                bottom: 164.818,
               ),
               decoration: BoxDecoration(
                 boxShadow: const [
@@ -131,6 +131,7 @@ class UserLainnya extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  // Menu item profil
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -154,6 +155,132 @@ class UserLainnya extends StatelessWidget {
                           IconButton(
                             onPressed: () {},
                             icon: Icon(Icons.chevron_right),
+                            color: kYankees30Color,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // Menu item pengaturan
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 24),
+                            width: 24,
+                            child: Image.asset('assets/icon_pengaturan.png'),
+                          ),
+                          Text(
+                            'Pengaturan',
+                            style: yankeesStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.chevron_right),
+                            color: kYankees30Color,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // Menu item bantuan
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 24),
+                            width: 24,
+                            child: Image.asset('assets/icon_bantuan.png'),
+                          ),
+                          Text(
+                            'Bantuan',
+                            style: yankeesStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.chevron_right),
+                            color: kYankees30Color,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // Menu item syarat dan ketentuan
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 24),
+                            width: 24,
+                            child: Image.asset('assets/icon_syarat.png'),
+                          ),
+                          Text(
+                            'Syarat dan ketentuan',
+                            style: yankeesStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.chevron_right),
+                            color: kYankees30Color,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // Menu item tentang lazismu
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 24),
+                            width: 24,
+                            child:
+                                Image.asset('assets/logo_lazismu_oranye.png'),
+                          ),
+                          Text(
+                            'Tentang LazisMu',
+                            style: yankeesStyle.copyWith(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.chevron_right),
+                            color: kYankees30Color,
                           ),
                         ],
                       ),
