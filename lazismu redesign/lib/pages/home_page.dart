@@ -13,14 +13,6 @@ class _UserHomeState extends State<UserHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kCulturedColor,
-      body: ListView(
-        padding: EdgeInsets.only(bottom: 80),
-        children: [
-          banner(),
-          kegiatanDonasi(),
-          layananAsnaf(),
-        ],
-      ),
 
       // Tombol ambulan darurat
       floatingActionButton: FloatingActionButton.extended(
@@ -38,45 +30,30 @@ class _UserHomeState extends State<UserHome> {
         icon: Icon(Icons.local_hospital_outlined),
         backgroundColor: kRedColor,
       ),
+      body: ListView(
+        padding: EdgeInsets.only(bottom: 80),
+        children: [
+          donasiSaya(),
+        ],
+      ),
     );
   }
 
-  Widget banner() {
-    return Container(
-      width: double.infinity,
-      height: 451,
-      color: kCulturedColor,
-      child: Stack(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 336,
-            color: kCrayola70Color,
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 24, top: 60),
-            child: Text(
-              'Kamu mau\ndonasikan apa?',
-              style: yankeesStyle.copyWith(
-                fontSize: 28,
-                fontWeight: bold,
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 42, left: 54),
-            width: 321,
-            height: 259,
-            child: Image.asset(
-              'assets/image_banner.png',
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(left: 24, right: 24, top: 295),
-            width: double.infinity,
-            height: 156,
+  Widget donasiSaya() {
+    return Stack(
+      children: [
+        Container(
+          // width: dou,
+          height: 94,
+          color: kCrayolaColor,
+        ),
+        SafeArea(
+          child: Container(
+            margin: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
+            padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+            height: 80,
             decoration: BoxDecoration(
-              color: kLavenderBlushColor,
+              color: kCulturedColor,
               borderRadius: BorderRadius.circular(14),
               boxShadow: const [
                 BoxShadow(
@@ -86,321 +63,67 @@ class _UserHomeState extends State<UserHome> {
                 ),
               ],
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    // Icon donasi
                     Container(
-                      margin: EdgeInsets.only(left: 24, top: 24),
-                      child: Text(
-                        'Donasi Saya',
-                        style: yankeesStyle.copyWith(
-                          fontSize: 16,
-                        ),
+                      margin: EdgeInsets.only(right: 14),
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(99),
+                        color: kLavenderBlushColor,
+                      ),
+                      child: Icon(
+                        Icons.card_giftcard_rounded,
+                        color: kCrayolaColor,
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 24, right: 24),
-                      // width: double.infinity,
-                      height: 12,
-                      child: Image.asset(
-                        'assets/logo_lazismu_oranye.png',
-                      ),
+                    // Jumlah donasi
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Donasi saya',
+                          style: yankeesStyle,
+                        ),
+                        SizedBox(height: 6),
+                        Text(
+                          '0',
+                          style: crayolaStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: bold,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
-                Stack(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 12, left: 24),
-                      child: Text(
-                        'Rp. 5.000.000',
-                        style: crayolaStyle.copyWith(
-                          fontSize: 24,
-                          fontWeight: bold,
-                        ),
-                      ),
+                Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    // color: kCrayolaColor,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      width: 2,
+                      color: kCrayolaColor,
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 24, top: 74),
-                      child: Text(
-                        '27/11/2022',
-                        style: yankeesStyle.copyWith(
-                          fontSize: 16,
-                        ),
-                      ),
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.add_rounded,
+                      color: kCrayolaColor,
+                      size: 16,
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 265, top: 32),
-                      width: 80,
-                      height: 78,
-                      child: Image.asset(
-                        'assets/logo_bunga.png',
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ],
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget kegiatanDonasi() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(
-          margin: EdgeInsets.only(top: 24, left: 24),
-          width: 160,
-          height: 200,
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(14),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 10,
-                spreadRadius: 1,
-              ),
-            ],
-          ),
-          child: Stack(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 124,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Image.asset('assets/image_kegiatan.png'),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 124),
-                child: Text(
-                  'Kegiatan',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 24,
-                    fontWeight: bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 164),
-                child: Text(
-                  '4 kegiatan',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 104, top: 140),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Icon(Icons.arrow_right_rounded),
-                  iconSize: 48,
-                  color: kYankeesColor,
-                ),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 24, right: 24),
-          width: 160,
-          height: 200,
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(14),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 10,
-                spreadRadius: 1,
-              ),
-            ],
-          ),
-          child: Stack(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 124,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Image.asset('assets/image_donasi.png'),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 124),
-                child: Text(
-                  'Donasi',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 24,
-                    fontWeight: bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 164),
-                child: Text(
-                  '2 jenis donasi',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 104, top: 140),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/donasi');
-                  },
-                  icon: Icon(Icons.arrow_right_rounded),
-                  iconSize: 48,
-                  color: kYankeesColor,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget layananAsnaf() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(
-          margin: EdgeInsets.only(top: 24, left: 24),
-          width: 160,
-          height: 200,
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(14),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 10,
-                spreadRadius: 1,
-              ),
-            ],
-          ),
-          child: Stack(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 124,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Image.asset('assets/image_layanan.png'),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 124),
-                child: Text(
-                  'Layanan',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 24,
-                    fontWeight: bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 164),
-                child: Text(
-                  '3 layanan',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 104, top: 140),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Icon(Icons.arrow_right_rounded),
-                  iconSize: 48,
-                  color: kYankeesColor,
-                ),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(top: 24, right: 24),
-          width: 160,
-          height: 200,
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(14),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 10,
-                spreadRadius: 1,
-              ),
-            ],
-          ),
-          child: Stack(
-            children: [
-              Container(
-                width: double.infinity,
-                height: 124,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Image.asset('assets/image_asnaf.png'),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 124),
-                child: Text(
-                  'Asnaf',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 24,
-                    fontWeight: bold,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 14, top: 164),
-                child: Text(
-                  '4 informasi',
-                  style: yankeesStyle.copyWith(
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 104, top: 140),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/layanan');
-                  },
-                  icon: Icon(Icons.arrow_right_rounded),
-                  iconSize: 48,
-                  color: kYankeesColor,
-                ),
-              ),
-            ],
           ),
         ),
       ],
