@@ -34,6 +34,7 @@ class _UserHomeState extends State<UserHome> {
         padding: EdgeInsets.only(bottom: 80),
         children: [
           donasiSaya(),
+          informasi(),
         ],
       ),
     );
@@ -49,7 +50,7 @@ class _UserHomeState extends State<UserHome> {
         ),
         SafeArea(
           child: Container(
-            margin: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
+            margin: EdgeInsets.only(left: 24, right: 24, top: 24),
             padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
             height: 80,
             decoration: BoxDecoration(
@@ -127,6 +128,183 @@ class _UserHomeState extends State<UserHome> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget informasi() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            // INFORMASI KEGIATAN
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Container(
+                width: 160,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: kLavenderBlushColor,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 124,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/kegiatan');
+                        },
+                        icon: Image.asset('assets/image_kegiatan.png'),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 14, top: 122),
+                      child: Text(
+                        'Kegiatan',
+                        style: yankeesStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 104, top: 102),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/kegiatan');
+                        },
+                        icon: Icon(Icons.arrow_right_rounded),
+                        iconSize: 48,
+                        color: kYankeesColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // INFORMASI LAYANAN
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Container(
+                width: 160,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: kLavenderBlushColor,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 124,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/layanan');
+                        },
+                        icon: Image.asset('assets/image_layanan.png'),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 14, top: 122),
+                      child: Text(
+                        'Layanan',
+                        style: yankeesStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 104, top: 102),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/layanan');
+                        },
+                        icon: Icon(Icons.arrow_right_rounded),
+                        iconSize: 48,
+                        color: kYankeesColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // INFORMASI ASNAF
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Container(
+                width: 160,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: kLavenderBlushColor,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      spreadRadius: 1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 124,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/asnaf');
+                        },
+                        icon: Image.asset('assets/image_asnaf.png'),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 14, top: 122),
+                      child: Text(
+                        'Asnaf',
+                        style: yankeesStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 104, top: 102),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/asnaf');
+                        },
+                        icon: Icon(Icons.arrow_right_rounded),
+                        iconSize: 48,
+                        color: kYankeesColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

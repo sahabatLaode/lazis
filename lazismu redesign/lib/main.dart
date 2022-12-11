@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lazismu/pages/asnaf_page.dart';
 import 'package:lazismu/pages/donasi_page.dart';
+import 'package:lazismu/pages/kegiatan_page.dart';
 import 'package:lazismu/pages/onboarding_page.dart';
 import 'package:lazismu/pages/sign_in_page.dart';
 import 'package:lazismu/pages/sign_up_page.dart';
@@ -27,7 +29,9 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => const SignUpPage(),
         '/homeboarding': (context) => const HomeboardingPage(),
         '/resetpassword': (context) => const ResetPasswordPage(),
+        '/kegiatan': (context) => const KegiatanPage(),
         '/layanan': (context) => const LayananPage(),
+        '/asnaf': (context) => const AsnafPage(),
         '/navbar': (context) => const NavbarItem(),
         '/donasi': (context) => const UserDonasi(),
       },
