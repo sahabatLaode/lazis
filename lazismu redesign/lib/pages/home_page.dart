@@ -27,14 +27,15 @@ class _UserHomeState extends State<UserHome> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
-        icon: Icon(Icons.local_hospital_outlined),
+        icon: const Icon(Icons.local_hospital_outlined),
         backgroundColor: kRedColor,
       ),
       body: ListView(
-        padding: EdgeInsets.only(bottom: 80),
+        // padding: const EdgeInsets.only(bottom: 80),
         children: [
           donasiSaya(),
           informasi(),
+          informasiLain(),
         ],
       ),
     );
@@ -43,15 +44,16 @@ class _UserHomeState extends State<UserHome> {
   Widget donasiSaya() {
     return Stack(
       children: [
+        // BACKGROUND KUNING
         Container(
           // width: dou,
-          height: 94,
+          height: 64,
           color: kCrayolaColor,
         ),
         SafeArea(
           child: Container(
-            margin: EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding: EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
+            padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
             height: 80,
             decoration: BoxDecoration(
               color: kCulturedColor,
@@ -59,7 +61,7 @@ class _UserHomeState extends State<UserHome> {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
@@ -67,61 +69,52 @@ class _UserHomeState extends State<UserHome> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                // TOTAL DONASI
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Icon donasi
-                    Container(
-                      margin: EdgeInsets.only(right: 14),
-                      width: 48,
-                      height: 48,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(99),
-                        color: kLavenderBlushColor,
-                      ),
-                      child: Icon(
-                        Icons.card_giftcard_rounded,
-                        color: kCrayolaColor,
-                      ),
+                    Text(
+                      'Total Donasi',
+                      style: yankeesStyle,
                     ),
-                    // Jumlah donasi
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Donasi saya',
-                          style: yankeesStyle,
-                        ),
-                        SizedBox(height: 6),
-                        Text(
-                          '0',
-                          style: crayolaStyle.copyWith(
-                            fontSize: 18,
-                            fontWeight: bold,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(height: 6),
+                    Text(
+                      '0',
+                      style: crayolaStyle.copyWith(
+                        fontSize: 18,
+                        fontWeight: bold,
+                      ),
                     ),
                   ],
                 ),
+
                 Container(
-                  width: 36,
-                  height: 36,
+                  margin: EdgeInsets.only(left: 36),
+                  width: 2,
+                  height: 70,
                   decoration: BoxDecoration(
-                    // color: kCrayolaColor,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      width: 2,
-                      color: kCrayolaColor,
-                    ),
+                    color: kYankeesColor,
+                    borderRadius: BorderRadius.circular(99),
                   ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.add_rounded,
-                      color: kCrayolaColor,
-                      size: 16,
+                ),
+
+                // DONASI TERSALURKAN
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Donasi Tersalurkan',
+                      style: yankeesStyle,
                     ),
-                  ),
+                    const SizedBox(height: 6),
+                    Text(
+                      '0',
+                      style: crayolaStyle.copyWith(
+                        fontSize: 18,
+                        fontWeight: bold,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -133,7 +126,7 @@ class _UserHomeState extends State<UserHome> {
 
   Widget informasi() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+      padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -142,8 +135,8 @@ class _UserHomeState extends State<UserHome> {
             Padding(
               padding: const EdgeInsets.all(12),
               child: Container(
-                width: 160,
-                height: 160,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   color: kLavenderBlushColor,
                   boxShadow: const [
@@ -153,13 +146,13 @@ class _UserHomeState extends State<UserHome> {
                       spreadRadius: 1,
                     ),
                   ],
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
-                      height: 124,
+                      height: 94,
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/kegiatan');
@@ -168,7 +161,7 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 14, top: 122),
+                      margin: const EdgeInsets.only(left: 12, top: 88),
                       child: Text(
                         'Kegiatan',
                         style: yankeesStyle.copyWith(
@@ -178,14 +171,14 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 104, top: 102),
+                      margin: const EdgeInsets.only(left: 70, top: 68),
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/kegiatan');
                         },
-                        icon: Icon(Icons.arrow_right_rounded),
+                        icon: const Icon(Icons.arrow_right_rounded),
                         iconSize: 48,
-                        color: kYankeesColor,
+                        color: kCrayolaColor,
                       ),
                     ),
                   ],
@@ -197,8 +190,8 @@ class _UserHomeState extends State<UserHome> {
             Padding(
               padding: const EdgeInsets.all(12),
               child: Container(
-                width: 160,
-                height: 160,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   color: kLavenderBlushColor,
                   boxShadow: const [
@@ -212,9 +205,9 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 child: Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
-                      height: 124,
+                      height: 94,
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/layanan');
@@ -223,7 +216,7 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 14, top: 122),
+                      margin: const EdgeInsets.only(left: 12, top: 88),
                       child: Text(
                         'Layanan',
                         style: yankeesStyle.copyWith(
@@ -233,14 +226,14 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 104, top: 102),
+                      margin: const EdgeInsets.only(left: 70, top: 68),
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/layanan');
                         },
-                        icon: Icon(Icons.arrow_right_rounded),
+                        icon: const Icon(Icons.arrow_right_rounded),
                         iconSize: 48,
-                        color: kYankeesColor,
+                        color: kCrayolaColor,
                       ),
                     ),
                   ],
@@ -252,8 +245,8 @@ class _UserHomeState extends State<UserHome> {
             Padding(
               padding: const EdgeInsets.all(12),
               child: Container(
-                width: 160,
-                height: 160,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   color: kLavenderBlushColor,
                   boxShadow: const [
@@ -267,9 +260,9 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 child: Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       width: double.infinity,
-                      height: 124,
+                      height: 94,
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/asnaf');
@@ -278,7 +271,7 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 14, top: 122),
+                      margin: const EdgeInsets.only(left: 12, top: 88),
                       child: Text(
                         'Asnaf',
                         style: yankeesStyle.copyWith(
@@ -288,14 +281,14 @@ class _UserHomeState extends State<UserHome> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 104, top: 102),
+                      margin: const EdgeInsets.only(left: 70, top: 68),
                       child: IconButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/asnaf');
                         },
-                        icon: Icon(Icons.arrow_right_rounded),
+                        icon: const Icon(Icons.arrow_right_rounded),
                         iconSize: 48,
-                        color: kYankeesColor,
+                        color: kCrayolaColor,
                       ),
                     ),
                   ],
@@ -304,6 +297,77 @@ class _UserHomeState extends State<UserHome> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget informasiLain() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              // TITLE
+              Text(
+                'Riwayat',
+                style: yankeesStyle.copyWith(
+                  fontSize: 18,
+                  fontWeight: bold,
+                ),
+              ),
+              const Spacer(),
+
+              // BUTTON
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: kCrayolaColor,
+                  padding: const EdgeInsets.all(6),
+                  minimumSize: const Size(12.0, 12.0),
+                  // shape: ,
+                ),
+                child: Text(
+                  'Lihat semua',
+                  style: culturedStyle.copyWith(
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(right: 12),
+                  width: 250,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: kCulturedColor,
+                    borderRadius: BorderRadius.circular(14),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 2,
+                        spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('data'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
