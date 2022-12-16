@@ -9,12 +9,12 @@ class UserAktivitas extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: kCulturedColor,
+        backgroundColor: kCultured95Color,
         appBar: AppBar(
           centerTitle: true,
           automaticallyImplyLeading: false,
           elevation: 0,
-          backgroundColor: kCulturedColor,
+          backgroundColor: kCultured95Color,
           title: Text(
             'Aktivitas',
             style: yankeesStyle.copyWith(

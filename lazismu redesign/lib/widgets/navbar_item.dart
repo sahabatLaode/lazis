@@ -29,7 +29,7 @@ class _NavbarItemState extends State<NavbarItem> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCulturedColor,
+      backgroundColor: kCultured95Color,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

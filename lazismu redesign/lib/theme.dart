@@ -5,6 +5,7 @@ Color kYankeesColor = Color(0xff1B2741);
 Color kCrayolaColor = Color(0xffF67034);
 Color kLavenderBlushColor = Color(0xffFFEAED);
 Color kCulturedColor = Color(0xffF7F6F9);
+Color kCultured95Color = Color(0xffEBEAEC);
 Color kYankees50Color = Color(0xffBBBEC6);
 Color kYankees30Color = Color(0xff8D93A0);
 Color kCrayola70Color = Color(0xffF6986F);

@@ -7,12 +7,12 @@ class UserPermintaan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCulturedColor,
+      backgroundColor: kCultured95Color,
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: kCulturedColor,
+        backgroundColor: kCultured95Color,
         title: Text(
           'Permintaan',
           style: yankeesStyle.copyWith(
