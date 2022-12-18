@@ -12,24 +12,24 @@ class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCultured95Color,
+      backgroundColor: kCulturedColor,
 
       // Tombol ambulan darurat
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Text(
-          'Ambulan Darurat',
-          style: culturedStyle.copyWith(
-            fontSize: 16,
-            fontWeight: bold,
-          ),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        icon: const Icon(Icons.local_hospital_outlined),
-        backgroundColor: kRedColor,
-      ),
+      // floatingActionButton: FloatingActionButton.extended(
+      //   onPressed: () {},
+      //   label: Text(
+      //     'Ambulan Darurat',
+      //     style: culturedStyle.copyWith(
+      //       fontSize: 16,
+      //       fontWeight: bold,
+      //     ),
+      //   ),
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.circular(12),
+      //   ),
+      //   icon: const Icon(Icons.local_hospital_outlined),
+      //   backgroundColor: kRedColor,
+      // ),
       body: ListView(
         // padding: const EdgeInsets.only(bottom: 80),
         children: [
@@ -45,80 +45,78 @@ class _UserHomeState extends State<UserHome> {
   Widget donasiSaya() {
     return Stack(
       children: [
-        // BACKGROUND KUNING
+        // BACKGROUND JINGGA
         Container(
           // width: dou,
           height: 64,
           color: kCrayolaColor,
         ),
-        SafeArea(
-          child: Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
-            height: 80,
-            decoration: BoxDecoration(
-              color: kCulturedColor,
-              borderRadius: BorderRadius.circular(14),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 2,
-                  spreadRadius: 1,
-                ),
-              ],
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // TOTAL DONASI
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Total Donasi',
-                      style: yankeesStyle,
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '0',
-                      style: crayolaStyle.copyWith(
-                        fontSize: 18,
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-
-                Container(
-                  margin: EdgeInsets.only(left: 36),
-                  width: 2,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: kYankeesColor,
-                    borderRadius: BorderRadius.circular(99),
+        Container(
+          margin: const EdgeInsets.only(left: 16, right: 16, top: 24),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+          height: 80,
+          decoration: BoxDecoration(
+            color: kCulturedColor,
+            borderRadius: BorderRadius.circular(14),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 2,
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // TOTAL DONASI
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Total Donasi',
+                    style: yankeesStyle,
                   ),
-                ),
+                  const SizedBox(height: 6),
+                  Text(
+                    '0',
+                    style: crayolaStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: bold,
+                    ),
+                  ),
+                ],
+              ),
 
-                // DONASI TERSALURKAN
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Donasi Tersalurkan',
-                      style: yankeesStyle,
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '0',
-                      style: crayolaStyle.copyWith(
-                        fontSize: 18,
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
+              Container(
+                margin: EdgeInsets.only(left: 36),
+                width: 2,
+                height: 70,
+                decoration: BoxDecoration(
+                  color: kYankeesColor,
+                  borderRadius: BorderRadius.circular(99),
                 ),
-              ],
-            ),
+              ),
+
+              // DONASI TERSALURKAN
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Donasi Tersalurkan',
+                    style: yankeesStyle,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    '0',
+                    style: crayolaStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: bold,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ],
@@ -126,173 +124,15 @@ class _UserHomeState extends State<UserHome> {
   }
 
   Widget macamDonasi() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            // ZAKAT
-            Column(
-              children: [
-                // IMAGE
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: kLavenderBlushColor,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/kegiatan');
-                      },
-                      icon: Image.asset(
-                        'assets/image_kegiatan.png',
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 3),
-
-                // TITLE
-                Text(
-                  'Zakat',
-                  style: yankeesStyle,
-                ),
-              ],
-            ),
-
-            // INFAQ
-            Column(
-              children: [
-                // IMAGE
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: kLavenderBlushColor,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/kegiatan');
-                      },
-                      icon: Image.asset(
-                        'assets/image_kegiatan.png',
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 3),
-
-                // TITLE
-                Text(
-                  'Infaq',
-                  style: yankeesStyle,
-                ),
-              ],
-            ),
-
-            // SEDEKAH
-            Column(
-              children: [
-                // IMAGE
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: kLavenderBlushColor,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/kegiatan');
-                      },
-                      icon: Image.asset(
-                        'assets/image_kegiatan.png',
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 3),
-
-                // TITLE
-                Text(
-                  'Sedekah',
-                  style: yankeesStyle,
-                ),
-              ],
-            ),
-
-            // KOIN SURGA
-            Column(
-              children: [
-                // IMAGE
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: kLavenderBlushColor,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          spreadRadius: 1,
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(99),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/kegiatan');
-                      },
-                      icon: Image.asset(
-                        'assets/image_kegiatan.png',
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 3),
-
-                // TITLE
-                Text(
-                  'Koin Surga',
-                  style: yankeesStyle,
-                ),
-              ],
-            ),
-          ],
-        ),
+    return Center(
+      child: Row(
+        children: [
+          Column(
+            children: [
+              Image.asset('assets/image_zakat.png'),
+            ],
+          ),
+        ],
       ),
     );
   }
