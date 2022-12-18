@@ -52,7 +52,7 @@ class _UserHomeState extends State<UserHome> {
           color: kCrayolaColor,
         ),
         Container(
-          margin: const EdgeInsets.only(left: 16, right: 16, top: 24),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 18),
           height: 80,
           decoration: BoxDecoration(
@@ -124,16 +124,101 @@ class _UserHomeState extends State<UserHome> {
   }
 
   Widget macamDonasi() {
-    return Center(
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Image.asset('assets/image_zakat.png'),
-            ],
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(6),
+              width: 64,
+              height: 64,
+              decoration: BoxDecoration(
+                color: kLavenderBlushColor,
+                borderRadius: BorderRadius.circular(14),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 1,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: Image.asset(
+                'assets/icon_zakat.png',
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Zakat',
+              style: yankeesStyle.copyWith(
+                fontWeight: bold,
+              ),
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(6),
+              width: 64,
+              height: 64,
+              decoration: BoxDecoration(
+                color: kLavenderBlushColor,
+                borderRadius: BorderRadius.circular(14),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 1,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: Image.asset(
+                'assets/icon_infaq.png',
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Infaq/Sedekah',
+              style: yankeesStyle.copyWith(
+                fontWeight: bold,
+              ),
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(6),
+              width: 64,
+              height: 64,
+              decoration: BoxDecoration(
+                color: kLavenderBlushColor,
+                borderRadius: BorderRadius.circular(14),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 1,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: Image.asset(
+                'assets/icon_koin_surga.png',
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Koin Surga',
+              style: yankeesStyle.copyWith(
+                fontWeight: bold,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
