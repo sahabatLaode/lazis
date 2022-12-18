@@ -128,6 +128,7 @@ class _UserHomeState extends State<UserHome> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        // QUICK MENU ZAKAT
         Column(
           children: [
             Container(
@@ -158,6 +159,8 @@ class _UserHomeState extends State<UserHome> {
             ),
           ],
         ),
+
+        // QUICK MENU INFAQ/SEDEKAH
         Column(
           children: [
             Container(
@@ -188,6 +191,8 @@ class _UserHomeState extends State<UserHome> {
             ),
           ],
         ),
+
+        // QUICK MENU KOIN SURGA
         Column(
           children: [
             Container(
@@ -224,7 +229,7 @@ class _UserHomeState extends State<UserHome> {
 
   Widget informasi() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -268,7 +273,8 @@ class _UserHomeState extends State<UserHome> {
                 children: [
                   // INFORMASI KEGIATAN
                   Padding(
-                    padding: const EdgeInsets.all(6),
+                    padding: const EdgeInsets.only(
+                        right: 12, left: 3, top: 3, bottom: 3),
                     child: Container(
                       width: 180,
                       height: 160,
@@ -277,7 +283,7 @@ class _UserHomeState extends State<UserHome> {
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
@@ -323,7 +329,7 @@ class _UserHomeState extends State<UserHome> {
 
                   // INFORMASI LAYANAN
                   Padding(
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.only(right: 6, left: 6),
                     child: Container(
                       width: 180,
                       height: 160,
@@ -332,7 +338,7 @@ class _UserHomeState extends State<UserHome> {
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
@@ -378,7 +384,7 @@ class _UserHomeState extends State<UserHome> {
 
                   // INFORMASI ASNAF
                   Padding(
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.only(right: 3, left: 12),
                     child: Container(
                       width: 180,
                       height: 160,
@@ -387,7 +393,7 @@ class _UserHomeState extends State<UserHome> {
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
@@ -441,7 +447,7 @@ class _UserHomeState extends State<UserHome> {
 
   Widget berita() {
     return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 24, bottom: 64),
+      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
