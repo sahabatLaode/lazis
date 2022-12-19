@@ -21,21 +21,6 @@ class UserPermintaan extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Text(
-          'Ambulan Darurat',
-          style: culturedStyle.copyWith(
-            fontSize: 16,
-            fontWeight: bold,
-          ),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        icon: const Icon(Icons.local_hospital_outlined),
-        backgroundColor: kRedColor,
-      ),
       body: Column(
         children: [
           Container(
