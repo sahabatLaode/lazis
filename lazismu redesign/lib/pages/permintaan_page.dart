@@ -7,12 +7,12 @@ class UserPermintaan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCultured95Color,
+      backgroundColor: kCulturedColor,
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: kCultured95Color,
+        backgroundColor: kCulturedColor,
         title: Text(
           'Permintaan',
           style: yankeesStyle.copyWith(
@@ -38,8 +38,16 @@ class UserPermintaan extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 24),
-          Image.asset('assets/image_permintaan.png'),
+          Container(
+            margin: EdgeInsets.only(top: 24),
+            width: double.infinity,
+            height: 150,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/image_permintaan.png'),
+              ),
+            ),
+          ),
           Container(
             margin: const EdgeInsets.only(left: 24, right: 24, top: 70),
             padding:

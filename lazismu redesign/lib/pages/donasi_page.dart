@@ -24,9 +24,10 @@ class UserDonasi extends StatelessWidget {
       body: Column(
         children: [
           Container(
+            margin: EdgeInsets.only(top: 24),
             width: double.infinity,
-            height: 230,
-            decoration: const BoxDecoration(
+            height: 170,
+            decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image_donasi.png'),
               ),
