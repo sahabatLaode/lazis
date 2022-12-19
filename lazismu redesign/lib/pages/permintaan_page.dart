@@ -45,7 +45,7 @@ class UserPermintaan extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
@@ -94,7 +94,7 @@ class UserPermintaan extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
@@ -143,7 +143,7 @@ class UserPermintaan extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
