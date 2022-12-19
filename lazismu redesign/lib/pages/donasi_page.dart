@@ -24,18 +24,18 @@ class UserDonasi extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 24),
+            margin: const EdgeInsets.only(top: 24),
             width: double.infinity,
             height: 170,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image_donasi.png'),
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 24, right: 24, top: 70),
-            padding: EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(left: 24, right: 24, top: 70),
+            padding: const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class UserDonasi extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: 24),
+                      margin: const EdgeInsets.only(right: 24),
                       width: 38,
                       height: 38,
                       decoration: BoxDecoration(
@@ -85,14 +85,14 @@ class UserDonasi extends StatelessWidget {
                     color: kYankeesColor,
                     size: 32.0,
                   ),
-                  padding: EdgeInsets.all(0.0),
+                  padding: const EdgeInsets.all(0.0),
                 ),
               ],
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding: EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
+            padding: const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -112,7 +112,7 @@ class UserDonasi extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: 24),
+                      margin: const EdgeInsets.only(right: 24),
                       width: 38,
                       height: 38,
                       decoration: BoxDecoration(
@@ -142,7 +142,7 @@ class UserDonasi extends StatelessWidget {
                     color: kYankeesColor,
                     size: 32.0,
                   ),
-                  padding: EdgeInsets.all(0.0),
+                  padding: const EdgeInsets.all(0.0),
                 ),
               ],
             ),

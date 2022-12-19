@@ -24,10 +24,10 @@ class UserPermintaan extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 24),
+            margin: const EdgeInsets.only(top: 24),
             width: double.infinity,
             height: 150,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/image_permintaan.png'),
               ),
