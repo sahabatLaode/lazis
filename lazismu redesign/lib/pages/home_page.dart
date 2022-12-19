@@ -229,7 +229,7 @@ class _UserHomeState extends State<UserHome> {
 
   Widget informasi() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -266,7 +266,7 @@ class _UserHomeState extends State<UserHome> {
 
           // ISI
           Padding(
-            padding: const EdgeInsets.only(top: 0),
+            padding: const EdgeInsets.only(top: 6),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -484,59 +484,50 @@ class _UserHomeState extends State<UserHome> {
 
           // ISI
           Padding(
-            padding: const EdgeInsets.only(top: 0),
+            padding: const EdgeInsets.only(top: 6),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   // INFORMASI KEGIATAN
                   Padding(
-                    padding: const EdgeInsets.all(6),
+                    padding: const EdgeInsets.only(
+                        right: 12, left: 3, top: 3, bottom: 3),
                     child: Container(
-                      width: 180,
-                      height: 160,
+                      padding: const EdgeInsets.all(12),
+                      width: 280,
+                      height: 200,
                       decoration: BoxDecoration(
                         color: kLavenderBlushColor,
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Stack(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 114,
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/kegiatan');
-                              },
-                              icon: Image.asset('assets/image_kegiatan.png'),
-                            ),
-                          ),
                           Container(
-                            margin: const EdgeInsets.only(left: 12, top: 118),
-                            child: Text(
-                              'Kegiatan',
-                              style: yankeesStyle.copyWith(
-                                fontSize: 20,
-                                fontWeight: bold,
+                            width: double.infinity,
+                            height: 120,
+                            decoration: BoxDecoration(
+                              color: kCulturedColor,
+                              borderRadius: BorderRadius.circular(12),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/image_berita1.jpg'),
                               ),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.only(left: 120, top: 101),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/kegiatan');
-                              },
-                              icon: const Icon(Icons.arrow_right_rounded),
-                              iconSize: 48,
-                              color: kCrayolaColor,
+                          const SizedBox(height: 6),
+                          Text(
+                            'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
+                            style: yankeesStyle.copyWith(
+                              fontWeight: bold,
                             ),
                           ),
                         ],
@@ -546,52 +537,42 @@ class _UserHomeState extends State<UserHome> {
 
                   // INFORMASI LAYANAN
                   Padding(
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.only(right: 6, left: 6),
                     child: Container(
-                      width: 180,
-                      height: 160,
+                      padding: const EdgeInsets.all(12),
+                      width: 280,
+                      height: 200,
                       decoration: BoxDecoration(
                         color: kLavenderBlushColor,
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Stack(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 114,
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/layanan');
-                              },
-                              icon: Image.asset('assets/image_layanan.png'),
-                            ),
-                          ),
                           Container(
-                            margin: const EdgeInsets.only(left: 12, top: 118),
-                            child: Text(
-                              'Layanan',
-                              style: yankeesStyle.copyWith(
-                                fontSize: 20,
-                                fontWeight: bold,
+                            width: double.infinity,
+                            height: 120,
+                            decoration: BoxDecoration(
+                              color: kCulturedColor,
+                              borderRadius: BorderRadius.circular(12),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/image_berita1.jpg'),
                               ),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.only(left: 120, top: 101),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/layanan');
-                              },
-                              icon: const Icon(Icons.arrow_right_rounded),
-                              iconSize: 48,
-                              color: kCrayolaColor,
+                          const SizedBox(height: 6),
+                          Text(
+                            'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
+                            style: yankeesStyle.copyWith(
+                              fontWeight: bold,
                             ),
                           ),
                         ],
@@ -601,52 +582,42 @@ class _UserHomeState extends State<UserHome> {
 
                   // INFORMASI ASNAF
                   Padding(
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.only(right: 3, left: 12),
                     child: Container(
-                      width: 180,
-                      height: 160,
+                      padding: const EdgeInsets.all(12),
+                      width: 280,
+                      height: 200,
                       decoration: BoxDecoration(
                         color: kLavenderBlushColor,
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.black12,
-                            blurRadius: 10,
+                            blurRadius: 2,
                             spreadRadius: 1,
                           ),
                         ],
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Stack(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 114,
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/asnaf');
-                              },
-                              icon: Image.asset('assets/image_asnaf.png'),
-                            ),
-                          ),
                           Container(
-                            margin: const EdgeInsets.only(left: 12, top: 118),
-                            child: Text(
-                              'Asnaf',
-                              style: yankeesStyle.copyWith(
-                                fontSize: 20,
-                                fontWeight: bold,
+                            width: double.infinity,
+                            height: 120,
+                            decoration: BoxDecoration(
+                              color: kCulturedColor,
+                              borderRadius: BorderRadius.circular(12),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('assets/image_berita1.jpg'),
                               ),
                             ),
                           ),
-                          Container(
-                            margin: const EdgeInsets.only(left: 120, top: 101),
-                            child: IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/asnaf');
-                              },
-                              icon: const Icon(Icons.arrow_right_rounded),
-                              iconSize: 48,
-                              color: kCrayolaColor,
+                          const SizedBox(height: 6),
+                          Text(
+                            'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
+                            style: yankeesStyle.copyWith(
+                              fontWeight: bold,
                             ),
                           ),
                         ],
