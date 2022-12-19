@@ -7,12 +7,12 @@ class UserDonasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCultured95Color,
+      backgroundColor: kCulturedColor,
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: kCultured95Color,
+        backgroundColor: kCulturedColor,
         title: Text(
           'Donasi',
           style: yankeesStyle.copyWith(
@@ -21,24 +21,17 @@ class UserDonasi extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Text(
-          'Ambulan Darurat',
-          style: culturedStyle.copyWith(
-            fontSize: 16,
-            fontWeight: bold,
-          ),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        icon: Icon(Icons.local_hospital_outlined),
-        backgroundColor: kRedColor,
-      ),
       body: Column(
         children: [
-          Image.asset('assets/image_donasi.png'),
+          Container(
+            width: double.infinity,
+            height: 230,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/image_donasi.png'),
+              ),
+            ),
+          ),
           Container(
             margin: EdgeInsets.only(left: 24, right: 24, top: 70),
             padding: EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
@@ -50,7 +43,7 @@ class UserDonasi extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
@@ -107,7 +100,7 @@ class UserDonasi extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(
                   color: Colors.black12,
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 1,
                 ),
               ],
