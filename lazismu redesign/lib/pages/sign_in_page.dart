@@ -42,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(
-          horizontal: 24,
+          horizontal: 16,
         ),
         children: [
           title(),

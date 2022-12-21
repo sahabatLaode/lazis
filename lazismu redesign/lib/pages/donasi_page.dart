@@ -34,8 +34,17 @@ class UserDonasi extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 70),
-            padding: const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 70,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -78,7 +87,7 @@ class UserDonasi extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/navbar');
+                    Navigator.pushNamed(context, '/donasi-zakat');
                   },
                   icon: Icon(
                     Icons.arrow_circle_right_rounded,
@@ -91,8 +100,17 @@ class UserDonasi extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding: const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 24,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -135,7 +153,7 @@ class UserDonasi extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/navbar');
+                    Navigator.pushNamed(context, '/donasi-infaq');
                   },
                   icon: Icon(
                     Icons.arrow_circle_right_rounded,

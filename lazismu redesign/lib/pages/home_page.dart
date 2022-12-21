@@ -132,7 +132,6 @@ class _UserHomeState extends State<UserHome> {
         Column(
           children: [
             Container(
-              padding: EdgeInsets.all(6),
               width: 64,
               height: 64,
               decoration: BoxDecoration(
@@ -146,8 +145,13 @@ class _UserHomeState extends State<UserHome> {
                   ),
                 ],
               ),
-              child: Image.asset(
-                'assets/icon_zakat.png',
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/donasi-zakat');
+                },
+                icon: Image.asset(
+                  'assets/icon_zakat.png',
+                ),
               ),
             ),
             const SizedBox(height: 12),
@@ -164,7 +168,6 @@ class _UserHomeState extends State<UserHome> {
         Column(
           children: [
             Container(
-              padding: EdgeInsets.all(6),
               width: 64,
               height: 64,
               decoration: BoxDecoration(
@@ -178,8 +181,13 @@ class _UserHomeState extends State<UserHome> {
                   ),
                 ],
               ),
-              child: Image.asset(
-                'assets/icon_infaq.png',
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/donasi-infaq');
+                },
+                icon: Image.asset(
+                  'assets/icon_infaq.png',
+                ),
               ),
             ),
             const SizedBox(height: 12),
@@ -196,7 +204,6 @@ class _UserHomeState extends State<UserHome> {
         Column(
           children: [
             Container(
-              padding: EdgeInsets.all(6),
               width: 64,
               height: 64,
               decoration: BoxDecoration(
@@ -210,8 +217,13 @@ class _UserHomeState extends State<UserHome> {
                   ),
                 ],
               ),
-              child: Image.asset(
-                'assets/icon_koin_surga.png',
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/permintaan-koin');
+                },
+                icon: Image.asset(
+                  'assets/icon_koin_surga.png',
+                ),
               ),
             ),
             const SizedBox(height: 12),

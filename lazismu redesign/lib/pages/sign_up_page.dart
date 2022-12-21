@@ -43,8 +43,8 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: 24,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
           vertical: 24,
         ),
         children: [
@@ -76,13 +76,13 @@ class _SignUpPageState extends State<SignUpPage> {
               fontWeight: bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(right: 4),
+                margin: const EdgeInsets.only(right: 4),
                 width: 128,
                 height: 4,
                 decoration: BoxDecoration(
@@ -100,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           Row(
@@ -122,8 +122,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget nameInput() {
     return Container(
-      margin: EdgeInsets.only(top: 32),
-      padding: EdgeInsets.all(16),
+      margin: const EdgeInsets.only(top: 32),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -141,8 +141,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget emailInput() {
     return Container(
-      margin: EdgeInsets.only(top: 24),
-      padding: EdgeInsets.all(16),
+      margin: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -166,8 +166,8 @@ class _SignUpPageState extends State<SignUpPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.only(top: 24),
-          padding: EdgeInsets.all(16),
+          margin: const EdgeInsets.only(top: 24),
+          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -198,7 +198,7 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
         if (isShowPasswordError)
           Container(
-            margin: EdgeInsets.only(top: 8),
+            margin: const EdgeInsets.only(top: 8),
             child: Text(
               'Kata sandi belum diisi',
               style: redStyle,
@@ -213,10 +213,10 @@ class _SignUpPageState extends State<SignUpPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.only(top: 24),
+          margin: const EdgeInsets.only(top: 24),
           width: 366,
           height: 56,
-          padding: EdgeInsets.only(left: 16, right: 6),
+          padding: const EdgeInsets.only(left: 16, right: 6),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -268,8 +268,8 @@ class _SignUpPageState extends State<SignUpPage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.only(top: 24),
-          padding: EdgeInsets.all(16),
+          margin: const EdgeInsets.only(top: 24),
+          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -277,10 +277,10 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Row(
             children: [
               Container(
-                margin: EdgeInsets.only(right: 10),
+                margin: const EdgeInsets.only(right: 10),
                 width: 24,
                 height: 24,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/icon_bendera.png'),
                   ),
@@ -293,7 +293,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontWeight: medium,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
               Expanded(
@@ -321,8 +321,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget nikInput() {
     return Container(
-      margin: EdgeInsets.only(top: 32),
-      padding: EdgeInsets.all(16),
+      margin: const EdgeInsets.only(top: 32),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -340,8 +340,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget addressInput() {
     return Container(
-      margin: EdgeInsets.only(top: 32),
-      padding: EdgeInsets.all(16),
+      margin: const EdgeInsets.only(top: 32),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -359,7 +359,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget bloodInput() {
     return Container(
-      margin: EdgeInsets.only(top: 24),
+      margin: const EdgeInsets.only(top: 24),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -370,7 +370,7 @@ class _SignUpPageState extends State<SignUpPage> {
           showSelectedItems: true,
         ),
         items: ["A", "B", "AB", "O"],
-        clearButtonProps: ClearButtonProps(isVisible: true),
+        clearButtonProps: const ClearButtonProps(isVisible: true),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
             filled: true,
@@ -391,7 +391,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget rantingInput() {
     return Container(
-      margin: EdgeInsets.only(top: 24),
+      margin: const EdgeInsets.only(top: 24),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -402,7 +402,7 @@ class _SignUpPageState extends State<SignUpPage> {
           showSelectedItems: true,
         ),
         items: ["Ranting 1", "Ranting 2", "Ranting 3", "Ranting 4"],
-        clearButtonProps: ClearButtonProps(isVisible: true),
+        clearButtonProps: const ClearButtonProps(isVisible: true),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
             filled: true,
@@ -423,7 +423,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget signUpButton() {
     return Container(
-      margin: EdgeInsets.only(top: 32),
+      margin: const EdgeInsets.only(top: 32),
       height: 56,
       width: double.infinity,
       child: TextButton(
@@ -432,7 +432,7 @@ class _SignUpPageState extends State<SignUpPage> {
             isLoading = true;
           });
 
-          Future.delayed(Duration(seconds: 2), () {
+          Future.delayed(const Duration(seconds: 2), () {
             setState(() {
               isLoading = false;
             });

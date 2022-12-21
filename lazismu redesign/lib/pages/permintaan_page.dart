@@ -23,6 +23,7 @@ class UserPermintaan extends StatelessWidget {
       ),
       body: Column(
         children: [
+          // GAMBAR
           Container(
             margin: const EdgeInsets.only(top: 24),
             width: double.infinity,
@@ -33,6 +34,8 @@ class UserPermintaan extends StatelessWidget {
               ),
             ),
           ),
+
+          // PERMINTAAN AMBULAN
           Container(
             margin: const EdgeInsets.only(left: 24, right: 24, top: 70),
             padding:
@@ -70,7 +73,7 @@ class UserPermintaan extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/navbar');
+                    Navigator.pushNamed(context, '/permintaan-ambulan');
                   },
                   icon: Icon(
                     Icons.arrow_circle_right_rounded,
@@ -82,55 +85,59 @@ class UserPermintaan extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding:
-                const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
-            width: double.infinity,
-            height: 86,
-            decoration: BoxDecoration(
-              color: kCulturedColor,
-              borderRadius: BorderRadius.circular(14),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 2,
-                  spreadRadius: 1,
-                ),
-              ],
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Image.asset('assets/icon_darah.png'),
-                    const SizedBox(
-                      width: 24,
-                    ),
-                    Text(
-                      'Permintaan Darah',
-                      style: yankeesStyle.copyWith(
-                        fontSize: 16,
-                        fontWeight: bold,
-                      ),
-                    ),
-                  ],
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/navbar');
-                  },
-                  icon: Icon(
-                    Icons.arrow_circle_right_rounded,
-                    color: kYankeesColor,
-                    size: 32.0,
-                  ),
-                  padding: const EdgeInsets.all(0.0),
-                ),
-              ],
-            ),
-          ),
+
+          // PERMINTAAN DARAH
+          // Container(
+          //   margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
+          //   padding:
+          //       const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+          //   width: double.infinity,
+          //   height: 86,
+          //   decoration: BoxDecoration(
+          //     color: kCulturedColor,
+          //     borderRadius: BorderRadius.circular(14),
+          //     boxShadow: const [
+          //       BoxShadow(
+          //         color: Colors.black12,
+          //         blurRadius: 2,
+          //         spreadRadius: 1,
+          //       ),
+          //     ],
+          //   ),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Row(
+          //         children: [
+          //           Image.asset('assets/icon_darah.png'),
+          //           const SizedBox(
+          //             width: 24,
+          //           ),
+          //           Text(
+          //             'Permintaan Darah',
+          //             style: yankeesStyle.copyWith(
+          //               fontSize: 16,
+          //               fontWeight: bold,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //       IconButton(
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/navbar');
+          //         },
+          //         icon: Icon(
+          //           Icons.arrow_circle_right_rounded,
+          //           color: kYankeesColor,
+          //           size: 32.0,
+          //         ),
+          //         padding: const EdgeInsets.all(0.0),
+          //       ),
+          //     ],
+          //   ),
+          // ),
+
+          // PERMINTAAN KOIN SURGA
           Container(
             margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
             padding:
@@ -168,7 +175,7 @@ class UserPermintaan extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/navbar');
+                    Navigator.pushNamed(context, '/permintaan-koin');
                   },
                   icon: Icon(
                     Icons.arrow_circle_right_rounded,
