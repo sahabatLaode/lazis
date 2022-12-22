@@ -7,16 +7,15 @@ class UserLainnya extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kCultured95Color,
+      backgroundColor: kCulturedColor,
       appBar: AppBar(
-        centerTitle: true,
         automaticallyImplyLeading: false,
-        elevation: 0,
-        backgroundColor: kCultured95Color,
+        elevation: 0.5,
+        backgroundColor: kCulturedColor,
         title: Text(
           'Lainnya',
           style: yankeesStyle.copyWith(
-            fontSize: 20,
+            fontSize: 22,
             fontWeight: bold,
           ),
         ),

@@ -13,74 +13,114 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kCulturedColor,
-      body: Column(
-        children: [
-          // logo
-          Padding(
-            padding: EdgeInsets.only(
-              left: 24,
-              right: 24,
-              bottom: 40,
-              top: 150,
-            ),
-            child: Image.asset("assets/iklan.png"),
-          ),
-
-          // Title
-          Padding(
-            padding: EdgeInsets.only(left: 24, right: 24, bottom: 24),
-            child: Text(
-              "Perjalanan donasimu dimulai disini",
-              textAlign: TextAlign.center,
-              style: yankeesStyle.copyWith(
-                fontSize: 32,
-                fontWeight: bold,
-              ),
-            ),
-          ),
-
-          // Subtitle
-          Padding(
-            padding: EdgeInsets.only(left: 24, right: 24),
-            child: Text(
-              "Salurkan zakat, infaq dan sedekahmu.\nDengan berdonasi anda telah ikut serta dalam mengentaskan kemiskinan.",
-              textAlign: TextAlign.center,
-              style: yankeesStyle,
-            ),
-          ),
-
-          const Spacer(),
-
-          // Button
-          GestureDetector(
-            onTap: () {
-              Navigator.pushReplacementNamed(context, "/sign-in");
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                color: kCrayolaColor,
-                borderRadius: BorderRadius.circular(14),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 1,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        child: Column(
+          children: [
+            // LOGO LAZISMU
+            SafeArea(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/logo_lazismu.png',
+                    width: 72,
                   ),
                 ],
               ),
-              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+            ),
+
+            // ILUSTRASI
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 24,
+                right: 24,
+                bottom: 40,
+                top: 80,
+              ),
+              child: Image.asset("assets/iklan.png"),
+            ),
+
+            // JUDUL
+            Padding(
+              padding: const EdgeInsets.only(bottom: 24),
               child: Text(
-                "Mulai",
-                style: culturedStyle.copyWith(
-                  fontSize: 18,
+                "Selamat datang di lazismu banguntapan selatan",
+                textAlign: TextAlign.center,
+                style: yankeesStyle.copyWith(
+                  fontSize: 28,
                   fontWeight: bold,
                 ),
               ),
             ),
-          ),
 
-          const Spacer(),
-        ],
+            // SUB JUDUL
+            Padding(
+              padding: const EdgeInsets.only(left: 24, right: 24),
+              child: Text(
+                "Salurkan zakat, infaq dan sedekahmu.\nDengan berdonasi anda telah ikut serta dalam mengentaskan kemiskinan.",
+                textAlign: TextAlign.center,
+                style: yankeesStyle,
+              ),
+            ),
+
+            const Spacer(),
+
+            // TOMBOL MASUK
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/sign-in');
+                },
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  backgroundColor: kCrayolaColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                ),
+                child: Text(
+                  'Masuk',
+                  style: culturedStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: bold,
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            // TOMBOL DAFTAR
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/sign-up-new');
+                },
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(14),
+                    side: BorderSide(
+                      color: kCrayolaColor,
+                    ),
+                  ),
+                ),
+                child: Text(
+                  'Daftar',
+                  style: crayolaStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: bold,
+                  ),
+                ),
+              ),
+            ),
+
+            const Spacer(),
+          ],
+        ),
       ),
     );
   }

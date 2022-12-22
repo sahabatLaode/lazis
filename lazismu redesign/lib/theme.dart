@@ -12,31 +12,31 @@ Color kCrayola70Color = Color(0xffF6986F);
 Color kBlueColor = Colors.blue;
 Color kRedColor = Colors.red;
 
-TextStyle yankeesStyle = GoogleFonts.nunito(
+TextStyle yankeesStyle = GoogleFonts.nunitoSans(
   color: kYankeesColor,
 );
-TextStyle crayolaStyle = GoogleFonts.nunito(
+TextStyle crayolaStyle = GoogleFonts.nunitoSans(
   color: kCrayolaColor,
 );
-TextStyle lavenderBlushStyle = GoogleFonts.nunito(
+TextStyle lavenderBlushStyle = GoogleFonts.nunitoSans(
   color: kLavenderBlushColor,
 );
-TextStyle culturedStyle = GoogleFonts.nunito(
+TextStyle culturedStyle = GoogleFonts.nunitoSans(
   color: kCulturedColor,
 );
-TextStyle yankees50Style = GoogleFonts.nunito(
+TextStyle yankees50Style = GoogleFonts.nunitoSans(
   color: kYankees50Color,
 );
-TextStyle yankees30Style = GoogleFonts.nunito(
+TextStyle yankees30Style = GoogleFonts.nunitoSans(
   color: kYankees30Color,
 );
-TextStyle blueStyle = GoogleFonts.nunito(
+TextStyle blueStyle = GoogleFonts.nunitoSans(
   color: kBlueColor,
 );
-TextStyle redStyle = GoogleFonts.nunito(
+TextStyle redStyle = GoogleFonts.nunitoSans(
   color: kRedColor,
 );
-TextStyle crayola70Style = GoogleFonts.nunito(
+TextStyle crayola70Style = GoogleFonts.nunitoSans(
   color: kCrayola70Color,
 );
 

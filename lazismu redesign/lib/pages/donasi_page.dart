@@ -9,14 +9,13 @@ class UserDonasi extends StatelessWidget {
     return Scaffold(
       backgroundColor: kCulturedColor,
       appBar: AppBar(
-        centerTitle: true,
         automaticallyImplyLeading: false,
-        elevation: 0,
+        elevation: 0.5,
         backgroundColor: kCulturedColor,
         title: Text(
           'Donasi',
           style: yankeesStyle.copyWith(
-            fontSize: 20,
+            fontSize: 22,
             fontWeight: bold,
           ),
         ),
@@ -143,7 +142,7 @@ class UserDonasi extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Infaq/Sodakoh',
+                      'Infaq/Sedekah',
                       style: yankeesStyle.copyWith(
                         fontSize: 16,
                         fontWeight: bold,

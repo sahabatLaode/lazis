@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:lazismu/theme.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({super.key});
+class SignUpPageNew extends StatefulWidget {
+  const SignUpPageNew({super.key});
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<SignUpPageNew> createState() => _SignUpPageNewState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageNewState extends State<SignUpPageNew> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
   bool isShowPasswordError = false;
   bool isLoading = false;
+
+  DateTime selectDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +31,15 @@ class _SignInPageState extends State<SignInPage> {
       body: ListView(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
+          vertical: 24,
         ),
         children: [
           title(),
+          nameInput(),
           emailInput(),
-          passwordInput(),
-          loginButton(),
-          resetPasswordButton(),
-          signUpButton(),
+          phoneNumberInput(),
+          continueButton(),
+          signInButton(),
         ],
       ),
     );
@@ -49,14 +52,14 @@ class _SignInPageState extends State<SignInPage> {
         // ILUSTRASI
         Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
-          child: Image.asset("assets/image_signin.png"),
+          child: Image.asset("assets/image_signup.png"),
         ),
 
         const SizedBox(height: 24),
 
         // TITLE
         Text(
-          'Masuk',
+          'Daftar',
           style: yankeesStyle.copyWith(
             fontSize: 32,
             fontWeight: bold,
@@ -66,9 +69,28 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget emailInput() {
+  Widget nameInput() {
     return Container(
       margin: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: kLavenderBlushColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: TextFormField(
+        decoration: InputDecoration.collapsed(
+            hintText: 'Nama Lengkap',
+            hintStyle: yankees30Style.copyWith(
+              fontSize: 16,
+              fontWeight: medium,
+            )),
+      ),
+    );
+  }
+
+  Widget emailInput() {
+    return Container(
+      margin: const EdgeInsets.only(top: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
@@ -78,7 +100,7 @@ class _SignInPageState extends State<SignInPage> {
         controller: emailController,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration.collapsed(
-          hintText: 'Email atau Nomor HP',
+          hintText: 'Email',
           hintStyle: yankees30Style.copyWith(
             fontSize: 16,
             fontWeight: medium,
@@ -88,7 +110,7 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget passwordInput() {
+  Widget phoneNumberInput() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -101,14 +123,35 @@ class _SignInPageState extends State<SignInPage> {
           ),
           child: Row(
             children: [
+              Container(
+                margin: const EdgeInsets.only(right: 10),
+                width: 24,
+                height: 24,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/icon_bendera.png'),
+                  ),
+                ),
+              ),
+              Text(
+                '+62',
+                style: yankeesStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: medium,
+                ),
+              ),
+              const SizedBox(
+                width: 12,
+              ),
               Expanded(
                 child: TextFormField(
+                  keyboardType: TextInputType.phone,
                   autocorrect: false,
                   obscureText: true,
                   controller: passwordController,
                   // keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration.collapsed(
-                    hintText: 'Kata Sandi',
+                    hintText: 'Nomor Telepon',
                     hintStyle: yankees30Style.copyWith(
                       fontSize: 16,
                       fontWeight: medium,
@@ -116,48 +159,37 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                 ),
               ),
-              Icon(
-                Icons.visibility_outlined,
-                color: kYankees30Color,
-              ),
             ],
           ),
         ),
-        if (isShowPasswordError)
-          Container(
-            margin: const EdgeInsets.only(top: 8),
-            child: Text(
-              'Kata sandi salah',
-              style: redStyle,
-            ),
-          ),
       ],
     );
   }
 
-  Widget loginButton() {
+  Widget continueButton() {
     return Container(
-      margin: const EdgeInsets.only(top: 24),
+      margin: const EdgeInsets.only(top: 32, bottom: 12),
       height: 56,
       width: double.infinity,
       child: TextButton(
         onPressed: () {
-          setState(() {
-            isLoading = true;
-          });
+          Navigator.pushReplacementNamed(context, '/homeboarding');
+          // setState(() {
+          //   isLoading = true;
+          // });
 
-          Future.delayed(const Duration(seconds: 2), () {
-            setState(() {
-              isLoading = false;
-            });
-            if (passwordController.text != '12345') {
-              setState(() {
-                isShowPasswordError = true;
-              });
-            } else {
-              Navigator.pushReplacementNamed(context, '/navbar');
-            }
-          });
+          // Future.delayed(const Duration(seconds: 2), () {
+          //   setState(() {
+          //     isLoading = false;
+          //   });
+          //   if (passwordController.text != '12345') {
+          //     setState(() {
+          //       isShowPasswordError = true;
+          //     });
+          //   } else {
+          //     Navigator.pushNamed(context, '/homeboarding');
+          //   }
+          // });
         },
         style: TextButton.styleFrom(
           backgroundColor: kCrayolaColor,
@@ -171,7 +203,7 @@ class _SignInPageState extends State<SignInPage> {
                 backgroundColor: kYankees50Color,
               )
             : Text(
-                'Masuk',
+                'Daftar',
                 style: crayolaStyle.copyWith(
                   color: kCulturedColor,
                   fontSize: 18,
@@ -182,42 +214,12 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget resetPasswordButton() {
-    return Container(
-      margin: const EdgeInsets.only(top: 24),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Lupa kata sandi?',
-            style: yankeesStyle.copyWith(
-              fontSize: 16,
-              fontWeight: regular,
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/forgotpassword');
-            },
-            child: Text(
-              'Atur ulang kata sandi',
-              style: blueStyle.copyWith(
-                fontSize: 16,
-                fontWeight: bold,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget signUpButton() {
+  Widget signInButton() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Belum punya akun?',
+          'Sudah punya akun?',
           style: yankeesStyle.copyWith(
             fontSize: 16,
             fontWeight: regular,
@@ -225,10 +227,10 @@ class _SignInPageState extends State<SignInPage> {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/sign-up-new');
+            Navigator.pushNamed(context, '/sign-in');
           },
           child: Text(
-            'Daftar',
+            'Masuk',
             style: blueStyle.copyWith(
               fontSize: 16,
               fontWeight: bold,

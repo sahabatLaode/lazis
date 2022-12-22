@@ -9,14 +9,14 @@ class UserPermintaan extends StatelessWidget {
     return Scaffold(
       backgroundColor: kCulturedColor,
       appBar: AppBar(
-        centerTitle: true,
+        // centerTitle: true,
         automaticallyImplyLeading: false,
-        elevation: 0,
+        elevation: 0.5,
         backgroundColor: kCulturedColor,
         title: Text(
           'Permintaan',
           style: yankeesStyle.copyWith(
-            fontSize: 20,
+            fontSize: 22,
             fontWeight: bold,
           ),
         ),
@@ -37,7 +37,7 @@ class UserPermintaan extends StatelessWidget {
 
           // PERMINTAAN AMBULAN
           Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 70),
+            margin: const EdgeInsets.only(left: 16, right: 16, top: 70),
             padding:
                 const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
             width: double.infinity,

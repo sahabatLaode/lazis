@@ -23,8 +23,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       backgroundColor: kCulturedColor,
       appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
+        elevation: 0.5,
         backgroundColor: kCulturedColor,
         iconTheme: IconThemeData(
           color: kYankeesColor,
