@@ -57,9 +57,10 @@ class _SignInPageState extends State<SignInPage> {
         // TITLE
         Text(
           'Masuk',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 32,
-            fontWeight: bold,
+            fontWeight: extrablack,
           ),
         ),
       ],
@@ -73,15 +74,19 @@ class _SignInPageState extends State<SignInPage> {
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         controller: emailController,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration.collapsed(
           hintText: 'Email atau Nomor HP',
-          hintStyle: yankees30Style.copyWith(
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
-            fontWeight: medium,
           ),
         ),
       ),
@@ -98,6 +103,10 @@ class _SignInPageState extends State<SignInPage> {
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              width: 1,
+              color: kYankees50Color,
+            ),
           ),
           child: Row(
             children: [
@@ -108,10 +117,10 @@ class _SignInPageState extends State<SignInPage> {
                   controller: passwordController,
                   // keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration.collapsed(
-                    hintText: 'Kata Sandi',
-                    hintStyle: yankees30Style.copyWith(
+                    hintText: 'Kata sandi',
+                    hintStyle: TextStyle(
+                      color: kYankees30Color,
                       fontSize: 16,
-                      fontWeight: medium,
                     ),
                   ),
                 ),
@@ -128,57 +137,56 @@ class _SignInPageState extends State<SignInPage> {
             margin: const EdgeInsets.only(top: 8),
             child: Text(
               'Kata sandi salah',
-              style: redStyle,
+              style: TextStyle(
+                color: kRedColor,
+              ),
             ),
           ),
+        const SizedBox(height: 32),
       ],
     );
   }
 
   Widget loginButton() {
-    return Container(
-      margin: const EdgeInsets.only(top: 24),
-      height: 56,
-      width: double.infinity,
-      child: TextButton(
-        onPressed: () {
-          setState(() {
-            isLoading = true;
-          });
+    return TextButton(
+      onPressed: () {
+        setState(() {
+          isLoading = true;
+        });
 
-          Future.delayed(const Duration(seconds: 2), () {
-            setState(() {
-              isLoading = false;
-            });
-            if (passwordController.text != '12345') {
-              setState(() {
-                isShowPasswordError = true;
-              });
-            } else {
-              Navigator.pushReplacementNamed(context, '/navbar');
-            }
+        Future.delayed(const Duration(seconds: 2), () {
+          setState(() {
+            isLoading = false;
           });
-        },
-        style: TextButton.styleFrom(
-          backgroundColor: kCrayolaColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+          if (passwordController.text != '12345') {
+            setState(() {
+              isShowPasswordError = true;
+            });
+          } else {
+            Navigator.pushReplacementNamed(context, '/navbar');
+          }
+        });
+      },
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.all(16),
+        backgroundColor: kCrayolaColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
         ),
-        child: isLoading
-            ? CircularProgressIndicator(
-                color: kCulturedColor,
-                backgroundColor: kYankees50Color,
-              )
-            : Text(
-                'Masuk',
-                style: crayolaStyle.copyWith(
-                  color: kCulturedColor,
-                  fontSize: 18,
-                  fontWeight: semibold,
-                ),
-              ),
       ),
+      child: isLoading
+          ? CircularProgressIndicator(
+              color: kCulturedColor,
+              backgroundColor: kYankees50Color,
+            )
+          : Text(
+              'Masuk',
+              style: TextStyle(
+                color: kCulturedColor,
+                fontSize: 18,
+                fontWeight: bold,
+              ),
+            ),
     );
   }
 
@@ -190,9 +198,9 @@ class _SignInPageState extends State<SignInPage> {
         children: [
           Text(
             'Lupa kata sandi?',
-            style: yankeesStyle.copyWith(
+            style: TextStyle(
+              color: kYankeesColor,
               fontSize: 16,
-              fontWeight: regular,
             ),
           ),
           TextButton(
@@ -201,9 +209,9 @@ class _SignInPageState extends State<SignInPage> {
             },
             child: Text(
               'Atur ulang kata sandi',
-              style: blueStyle.copyWith(
+              style: TextStyle(
+                color: kBlueColor,
                 fontSize: 16,
-                fontWeight: bold,
               ),
             ),
           ),
@@ -218,9 +226,9 @@ class _SignInPageState extends State<SignInPage> {
       children: [
         Text(
           'Belum punya akun?',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 16,
-            fontWeight: regular,
           ),
         ),
         TextButton(
@@ -229,9 +237,9 @@ class _SignInPageState extends State<SignInPage> {
           },
           child: Text(
             'Daftar',
-            style: blueStyle.copyWith(
+            style: TextStyle(
+              color: kBlueColor,
               fontSize: 16,
-              fontWeight: bold,
             ),
           ),
         ),

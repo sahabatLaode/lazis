@@ -44,7 +44,6 @@ class _UserHomeState extends State<UserHome> {
 
   Widget donasiSaya() {
     return Stack(
-      
       children: [
         // BACKGROUND JINGGA
         Container(
@@ -76,12 +75,15 @@ class _UserHomeState extends State<UserHome> {
                 children: [
                   Text(
                     'Total Donasi',
-                    style: yankeesStyle,
+                    style: TextStyle(
+                      color: kYankeesColor,
+                    ),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     '0',
-                    style: crayolaStyle.copyWith(
+                    style: TextStyle(
+                      color: kCrayolaColor,
                       fontSize: 18,
                       fontWeight: bold,
                     ),
@@ -90,7 +92,7 @@ class _UserHomeState extends State<UserHome> {
               ),
 
               Container(
-                margin: EdgeInsets.only(left: 36),
+                margin: const EdgeInsets.only(left: 36),
                 width: 2,
                 height: 70,
                 decoration: BoxDecoration(
@@ -105,12 +107,15 @@ class _UserHomeState extends State<UserHome> {
                 children: [
                   Text(
                     'Donasi Tersalurkan',
-                    style: yankeesStyle,
+                    style: TextStyle(
+                      color: kYankeesColor,
+                    ),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     '0',
-                    style: crayolaStyle.copyWith(
+                    style: TextStyle(
+                      color: kCrayolaColor,
                       fontSize: 18,
                       fontWeight: bold,
                     ),
@@ -158,7 +163,8 @@ class _UserHomeState extends State<UserHome> {
             const SizedBox(height: 12),
             Text(
               'Zakat',
-              style: yankeesStyle.copyWith(
+              style: TextStyle(
+                color: kYankeesColor,
                 fontWeight: bold,
               ),
             ),
@@ -194,7 +200,8 @@ class _UserHomeState extends State<UserHome> {
             const SizedBox(height: 12),
             Text(
               'Infaq/Sedekah',
-              style: yankeesStyle.copyWith(
+              style: TextStyle(
+                color: kYankeesColor,
                 fontWeight: bold,
               ),
             ),
@@ -230,7 +237,8 @@ class _UserHomeState extends State<UserHome> {
             const SizedBox(height: 12),
             Text(
               'Koin Surga',
-              style: yankeesStyle.copyWith(
+              style: TextStyle(
+                color: kYankeesColor,
                 fontWeight: bold,
               ),
             ),
@@ -251,7 +259,8 @@ class _UserHomeState extends State<UserHome> {
               // TITLE
               Text(
                 'Informasi',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 24,
                   fontWeight: bold,
                 ),
@@ -269,7 +278,8 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 child: Text(
                   'Lihat semua',
-                  style: culturedStyle.copyWith(
+                  style: TextStyle(
+                    color: kCulturedColor,
                     fontSize: 12,
                   ),
                 ),
@@ -318,7 +328,8 @@ class _UserHomeState extends State<UserHome> {
                             margin: const EdgeInsets.only(left: 12, top: 118),
                             child: Text(
                               'Kegiatan',
-                              style: yankeesStyle.copyWith(
+                              style: TextStyle(
+                                color: kYankeesColor,
                                 fontSize: 20,
                                 fontWeight: bold,
                               ),
@@ -373,7 +384,8 @@ class _UserHomeState extends State<UserHome> {
                             margin: const EdgeInsets.only(left: 12, top: 118),
                             child: Text(
                               'Layanan',
-                              style: yankeesStyle.copyWith(
+                              style: TextStyle(
+                                color: kYankeesColor,
                                 fontSize: 20,
                                 fontWeight: bold,
                               ),
@@ -428,7 +440,8 @@ class _UserHomeState extends State<UserHome> {
                             margin: const EdgeInsets.only(left: 12, top: 118),
                             child: Text(
                               'Asnaf',
-                              style: yankeesStyle.copyWith(
+                              style: TextStyle(
+                                color: kYankeesColor,
                                 fontSize: 20,
                                 fontWeight: bold,
                               ),
@@ -469,7 +482,8 @@ class _UserHomeState extends State<UserHome> {
               // TITLE
               Text(
                 'Berita',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 24,
                   fontWeight: bold,
                 ),
@@ -487,7 +501,8 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 child: Text(
                   'Lihat semua',
-                  style: culturedStyle.copyWith(
+                  style: TextStyle(
+                    color: kCulturedColor,
                     fontSize: 12,
                   ),
                 ),
@@ -539,7 +554,8 @@ class _UserHomeState extends State<UserHome> {
                           const SizedBox(height: 6),
                           Text(
                             'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
-                            style: yankeesStyle.copyWith(
+                            style: TextStyle(
+                              color: kYankeesColor,
                               fontWeight: bold,
                             ),
                           ),
@@ -584,7 +600,8 @@ class _UserHomeState extends State<UserHome> {
                           const SizedBox(height: 6),
                           Text(
                             'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
-                            style: yankeesStyle.copyWith(
+                            style: TextStyle(
+                              color: kYankeesColor,
                               fontWeight: bold,
                             ),
                           ),
@@ -629,7 +646,8 @@ class _UserHomeState extends State<UserHome> {
                           const SizedBox(height: 6),
                           Text(
                             'Lazismu menyalurkan koin surga\nke daerah terdampak gempa di Cianjur',
-                            style: yankeesStyle.copyWith(
+                            style: TextStyle(
+                              color: kYankeesColor,
                               fontWeight: bold,
                             ),
                           ),

@@ -9,13 +9,13 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 48),
-            const Padding(
+          children: const [
+            SizedBox(height: 48),
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Text("Good morning,"),
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Text(
@@ -26,12 +26,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
-            const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            SizedBox(height: 24),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Divider(),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: 24),
           ],
         ),
       ),

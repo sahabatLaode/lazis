@@ -33,7 +33,8 @@ class _SignUpPageState extends State<SignUpPage> {
           children: [
             Text(
               'Daftar',
-              style: yankeesStyle.copyWith(
+              style: TextStyle(
+                color: kYankeesColor,
                 fontSize: 20,
                 fontWeight: semibold,
               ),
@@ -70,7 +71,8 @@ class _SignUpPageState extends State<SignUpPage> {
         children: [
           Text(
             'Ayo bergabung bersama\nLazisMu Banguntapan Selatan',
-            style: yankeesStyle.copyWith(
+            style: TextStyle(
+              color: kYankeesColor,
               fontSize: 24,
               fontWeight: bold,
             ),
@@ -107,7 +109,8 @@ class _SignUpPageState extends State<SignUpPage> {
             children: [
               Text(
                 'Buat akun untuk memulai zakat, infaq dan\nsodakoh untuk bangkitkan Indonesia.',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 16,
                 ),
                 textAlign: TextAlign.center,
@@ -130,7 +133,8 @@ class _SignUpPageState extends State<SignUpPage> {
       child: TextFormField(
         decoration: InputDecoration.collapsed(
             hintText: 'Nama Lengkap',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -151,7 +155,8 @@ class _SignUpPageState extends State<SignUpPage> {
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration.collapsed(
           hintText: 'Email',
-          hintStyle: yankees30Style.copyWith(
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
             fontWeight: medium,
           ),
@@ -181,7 +186,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   // keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration.collapsed(
                     hintText: 'Kata Sandi',
-                    hintStyle: yankees30Style.copyWith(
+                    hintStyle: TextStyle(
+                      color: kYankees30Color,
                       fontSize: 16,
                       fontWeight: medium,
                     ),
@@ -200,7 +206,9 @@ class _SignUpPageState extends State<SignUpPage> {
             margin: const EdgeInsets.only(top: 8),
             child: Text(
               'Kata sandi belum diisi',
-              style: redStyle,
+              style: TextStyle(
+                color: kRedColor,
+              ),
             ),
           ),
       ],
@@ -225,7 +233,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Expanded(
                 child: Text(
                   selectDate.toString(),
-                  style: yankees30Style.copyWith(
+                  style: TextStyle(
                     color: kYankees30Color,
                     fontSize: 16,
                   ),
@@ -287,7 +295,8 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               Text(
                 '+62',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 16,
                   fontWeight: medium,
                 ),
@@ -304,7 +313,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   // keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration.collapsed(
                     hintText: 'Nomor Telepon',
-                    hintStyle: yankees30Style.copyWith(
+                    hintStyle: TextStyle(
+                      color: kYankees30Color,
                       fontSize: 16,
                       fontWeight: medium,
                     ),
@@ -329,7 +339,8 @@ class _SignUpPageState extends State<SignUpPage> {
       child: TextFormField(
         decoration: InputDecoration.collapsed(
             hintText: 'Nomor Induk KTP (NIK)',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -348,7 +359,8 @@ class _SignUpPageState extends State<SignUpPage> {
       child: TextFormField(
         decoration: InputDecoration.collapsed(
             hintText: 'Alamat',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -368,7 +380,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           showSelectedItems: true,
         ),
-        items: ["A", "B", "AB", "O"],
+        items: const ["A", "B", "AB", "O"],
         clearButtonProps: const ClearButtonProps(isVisible: true),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
@@ -379,7 +391,8 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             fillColor: kLavenderBlushColor,
             labelText: " Golongan Darah",
-            labelStyle: yankees30Style.copyWith(
+            labelStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
             ),
           ),
@@ -400,7 +413,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           showSelectedItems: true,
         ),
-        items: ["Ranting 1", "Ranting 2", "Ranting 3", "Ranting 4"],
+        items: const ["Ranting 1", "Ranting 2", "Ranting 3", "Ranting 4"],
         clearButtonProps: const ClearButtonProps(isVisible: true),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
@@ -411,7 +424,8 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             fillColor: kLavenderBlushColor,
             labelText: " Ranting",
-            labelStyle: yankees30Style.copyWith(
+            labelStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
             ),
           ),
@@ -457,7 +471,7 @@ class _SignUpPageState extends State<SignUpPage> {
               )
             : Text(
                 'Daftar',
-                style: crayolaStyle.copyWith(
+                style: TextStyle(
                   color: kCulturedColor,
                   fontSize: 18,
                   fontWeight: semibold,

@@ -16,7 +16,8 @@ class UserAktivitas extends StatelessWidget {
           backgroundColor: kCulturedColor,
           title: Text(
             'Aktivitas',
-            style: yankeesStyle.copyWith(
+            style: TextStyle(
+              color: kYankeesColor,
               fontSize: 22,
               fontWeight: bold,
             ),
@@ -29,7 +30,8 @@ class UserAktivitas extends StatelessWidget {
                 Tab(
                   child: Text(
                     'Dalam Proses',
-                    style: yankeesStyle.copyWith(
+                    style: TextStyle(
+                      color: kYankeesColor,
                       fontSize: 16,
                       fontWeight: bold,
                     ),
@@ -38,7 +40,8 @@ class UserAktivitas extends StatelessWidget {
                 Tab(
                   child: Text(
                     'Selesai',
-                    style: yankeesStyle.copyWith(
+                    style: TextStyle(
+                      color: kYankeesColor,
                       fontSize: 16,
                       fontWeight: bold,
                     ),
@@ -49,35 +52,35 @@ class UserAktivitas extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 children: [
-                  Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 220,
-                          child: Image.asset('assets/image_no_activity.png'),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 220,
+                        child: Image.asset('assets/image_no_activity.png'),
+                      ),
+                      const SizedBox(
+                        height: 48,
+                      ),
+                      Text(
+                        'Belum ada aktivitas yang dilakukan.',
+                        style: TextStyle(
+                          color: kYankeesColor,
+                          fontSize: 16,
                         ),
-                        SizedBox(
-                          height: 48,
-                        ),
-                        Text(
-                          'Belum ada aktivitas yang dilakukan.',
-                          style: yankeesStyle.copyWith(
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Mulai dengan Donasi',
+                          style: TextStyle(
+                            color: kBlueColor,
                             fontSize: 16,
+                            fontWeight: bold,
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Mulai dengan Donasi',
-                            style: blueStyle.copyWith(
-                              fontSize: 16,
-                              fontWeight: bold,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   Container(
                     child: Column(
@@ -92,7 +95,8 @@ class UserAktivitas extends StatelessWidget {
                         ),
                         Text(
                           'Belum ada aktivitas yang dilakukan.',
-                          style: yankeesStyle.copyWith(
+                          style: TextStyle(
+                            color: kYankeesColor,
                             fontSize: 16,
                           ),
                         ),
@@ -100,7 +104,8 @@ class UserAktivitas extends StatelessWidget {
                           onPressed: () {},
                           child: Text(
                             'Mulai dengan Donasi',
-                            style: blueStyle.copyWith(
+                            style: TextStyle(
+                              color: kBlueColor,
                               fontSize: 16,
                               fontWeight: bold,
                             ),

@@ -15,7 +15,8 @@ class UserPermintaan extends StatelessWidget {
         backgroundColor: kCulturedColor,
         title: Text(
           'Permintaan',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 22,
             fontWeight: bold,
           ),
@@ -64,7 +65,8 @@ class UserPermintaan extends StatelessWidget {
                     ),
                     Text(
                       'Permintaan Ambulan',
-                      style: yankeesStyle.copyWith(
+                      style: TextStyle(
+                        color: kYankeesColor,
                         fontSize: 16,
                         fontWeight: bold,
                       ),
@@ -166,7 +168,8 @@ class UserPermintaan extends StatelessWidget {
                     ),
                     Text(
                       'Permintaan Koin Surga',
-                      style: yankeesStyle.copyWith(
+                      style: TextStyle(
+                        color: kYankeesColor,
                         fontSize: 16,
                         fontWeight: bold,
                       ),

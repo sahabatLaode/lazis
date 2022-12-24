@@ -32,7 +32,9 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
           children: [
             Text(
               'Permintaan Ambulan',
-              style: yankeesStyle.copyWith(
+              style: TextStyle(
+                      color: kYankeesColor,
+                    
                 fontSize: 20,
                 fontWeight: semibold,
               ),
@@ -62,7 +64,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
       children: [
         Text(
           'Data :',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 16,
             fontWeight: bold,
           ),
@@ -77,7 +80,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
           ),
           child: Text(
             'Gunakan data aplikasi',
-            style: culturedStyle.copyWith(
+            style: TextStyle(
+              color: kCulturedColor,
               fontSize: 12,
             ),
           ),
@@ -100,7 +104,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
           child: TextFormField(
             decoration: InputDecoration.collapsed(
                 hintText: 'Nama',
-                hintStyle: yankees30Style.copyWith(
+                hintStyle: TextStyle(
+                  color: kYankees30Color,
                   fontSize: 16,
                   fontWeight: medium,
                 )),
@@ -108,10 +113,12 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
         ),
         if (isShowPasswordError)
           Container(
-            margin: EdgeInsets.only(top: 8),
+            margin: const EdgeInsets.only(top: 8),
             child: Text(
               'Nama tidak boleh kosong',
-              style: redStyle,
+              style: TextStyle(
+                color: kRedColor,
+              ),
             ),
           ),
       ],
@@ -130,7 +137,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
         keyboardType: TextInputType.streetAddress,
         decoration: InputDecoration.collapsed(
             hintText: 'Alamat',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -150,7 +158,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
         keyboardType: TextInputType.phone,
         decoration: InputDecoration.collapsed(
             hintText: 'Nomor Telepon',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -170,7 +179,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
         keyboardType: TextInputType.number,
         decoration: InputDecoration.collapsed(
             hintText: 'Nominal Rp.',
-            hintStyle: yankees30Style.copyWith(
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
               fontWeight: medium,
             )),
@@ -180,7 +190,7 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
 
   Widget rekening() {
     return Container(
-      margin: EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(top: 12),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -195,7 +205,7 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
           "Jemput ke Alamat",
           "Diantar ke kantor Lazismu Banguntapan Selatan",
         ],
-        clearButtonProps: ClearButtonProps(isVisible: true),
+        clearButtonProps: const ClearButtonProps(isVisible: true),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
             filled: true,
@@ -205,7 +215,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
             ),
             fillColor: kLavenderBlushColor,
             labelText: " Rekening",
-            labelStyle: yankees30Style.copyWith(
+            labelStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
             ),
           ),
@@ -216,8 +227,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
 
   Widget nomorRekening() {
     return Container(
-      margin: EdgeInsets.only(top: 24),
-      padding: EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
+      margin: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
       width: double.infinity,
       decoration: BoxDecoration(
         color: kCulturedColor,
@@ -238,30 +249,36 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
             children: [
               Text(
                 '00011122233344',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontWeight: bold,
                 ),
               ),
               Text(
                 'Bank Bantul',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontWeight: bold,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Text(
             'LazisMu Banguntapan Selatan',
-            style: yankees30Style,
+            style: TextStyle(
+              color: kYankees30Color,
+            ),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '20 Desember 2022',
-                style: yankees30Style,
+                style: TextStyle(
+              color: kYankees30Color,
+            ),
               ),
               ElevatedButton(
                 onPressed: () {},
@@ -273,7 +290,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
                 ),
                 child: Text(
                   'Salin rekening',
-                  style: culturedStyle.copyWith(
+                  style: TextStyle(
+                    color: kCulturedColor,
                     fontSize: 12,
                   ),
                 ),
@@ -307,7 +325,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
             },
             child: Text(
               'Batalkan',
-              style: crayolaStyle.copyWith(
+              style: TextStyle(
+                color: kCrayolaColor,
                 fontSize: 18,
                 fontWeight: semibold,
               ),
@@ -352,7 +371,7 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
                   )
                 : Text(
                     'Konfirmasi',
-                    style: crayolaStyle.copyWith(
+                    style: TextStyle(
                       color: kCulturedColor,
                       fontSize: 18,
                       fontWeight: semibold,

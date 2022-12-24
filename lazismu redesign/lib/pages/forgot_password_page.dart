@@ -53,7 +53,8 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
         // TITLE
         Text(
           'Lupa kata sandi?',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 32,
             fontWeight: bold,
           ),
@@ -70,7 +71,9 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
         // SUB TITLE
         Text(
           'Masukkan email valid anda\nuntuk mendapatkan kode OTP',
-          style: yankeesStyle,
+          style: TextStyle(
+            color: kYankeesColor,
+          ),
         ),
 
         // EMAIL INPUT
@@ -80,15 +83,19 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              width: 1,
+              color: kYankees50Color,
+            ),
           ),
           child: TextFormField(
             controller: emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration.collapsed(
               hintText: 'Email',
-              hintStyle: yankees30Style.copyWith(
+              hintStyle: TextStyle(
+                color: kYankees30Color,
                 fontSize: 16,
-                fontWeight: medium,
               ),
             ),
           ),
@@ -134,7 +141,7 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
               )
             : Text(
                 'Kirim',
-                style: crayolaStyle.copyWith(
+                style: TextStyle(
                   color: kCulturedColor,
                   fontSize: 18,
                   fontWeight: semibold,

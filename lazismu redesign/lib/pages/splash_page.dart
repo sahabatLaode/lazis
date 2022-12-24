@@ -26,16 +26,10 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: kCulturedColor,
       body: Center(
-        child: Container(
+        child: Image.asset(
+          'assets/logo_lazismu.png',
           width: 204,
           height: 135,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                'assets/logo_lazismu.png',
-              ),
-            ),
-          ),
         ),
       ),
     );

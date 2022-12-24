@@ -38,7 +38,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
           nameInput(),
           emailInput(),
           phoneNumberInput(),
-          continueButton(),
+          signUpButton(),
           signInButton(),
         ],
       ),
@@ -60,9 +60,10 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
         // TITLE
         Text(
           'Daftar',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 32,
-            fontWeight: bold,
+            fontWeight: extrablack,
           ),
         ),
       ],
@@ -76,13 +77,17 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         decoration: InputDecoration.collapsed(
-            hintText: 'Nama Lengkap',
-            hintStyle: yankees30Style.copyWith(
+            hintText: 'Nama lengkap',
+            hintStyle: TextStyle(
+              color: kYankees30Color,
               fontSize: 16,
-              fontWeight: medium,
             )),
       ),
     );
@@ -95,15 +100,19 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         controller: emailController,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration.collapsed(
           hintText: 'Email',
-          hintStyle: yankees30Style.copyWith(
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
-            fontWeight: medium,
           ),
         ),
       ),
@@ -120,6 +129,10 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              width: 1,
+              color: kYankees50Color,
+            ),
           ),
           child: Row(
             children: [
@@ -135,9 +148,10 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
               ),
               Text(
                 '+62',
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 16,
-                  fontWeight: medium,
+                  fontWeight: semibold,
                 ),
               ),
               const SizedBox(
@@ -152,9 +166,9 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
                   // keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration.collapsed(
                     hintText: 'Nomor Telepon',
-                    hintStyle: yankees30Style.copyWith(
+                    hintStyle: TextStyle(
+                      color: kYankees30Color,
                       fontSize: 16,
-                      fontWeight: medium,
                     ),
                   ),
                 ),
@@ -162,82 +176,82 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
             ],
           ),
         ),
+        const SizedBox(height: 32),
       ],
     );
   }
 
-  Widget continueButton() {
-    return Container(
-      margin: const EdgeInsets.only(top: 32, bottom: 12),
-      height: 56,
-      width: double.infinity,
-      child: TextButton(
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, '/homeboarding');
-          // setState(() {
-          //   isLoading = true;
-          // });
+  Widget signUpButton() {
+    return TextButton(
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, '/homeboarding');
+        // setState(() {
+        //   isLoading = true;
+        // });
 
-          // Future.delayed(const Duration(seconds: 2), () {
-          //   setState(() {
-          //     isLoading = false;
-          //   });
-          //   if (passwordController.text != '12345') {
-          //     setState(() {
-          //       isShowPasswordError = true;
-          //     });
-          //   } else {
-          //     Navigator.pushNamed(context, '/homeboarding');
-          //   }
-          // });
-        },
-        style: TextButton.styleFrom(
-          backgroundColor: kCrayolaColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+        // Future.delayed(const Duration(seconds: 2), () {
+        //   setState(() {
+        //     isLoading = false;
+        //   });
+        //   if (passwordController.text != '12345') {
+        //     setState(() {
+        //       isShowPasswordError = true;
+        //     });
+        //   } else {
+        //     Navigator.pushNamed(context, '/homeboarding');
+        //   }
+        // });
+      },
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.all(16),
+        backgroundColor: kCrayolaColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
         ),
-        child: isLoading
-            ? CircularProgressIndicator(
-                color: kCulturedColor,
-                backgroundColor: kYankees50Color,
-              )
-            : Text(
-                'Daftar',
-                style: crayolaStyle.copyWith(
-                  color: kCulturedColor,
-                  fontSize: 18,
-                  fontWeight: semibold,
-                ),
-              ),
       ),
+      child: isLoading
+          ? CircularProgressIndicator(
+              color: kCulturedColor,
+              backgroundColor: kYankees50Color,
+            )
+          : Text(
+              'Daftar',
+              style: TextStyle(
+                color: kCulturedColor,
+                fontSize: 18,
+                fontWeight: bold,
+              ),
+            ),
     );
   }
 
   Widget signInButton() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Sudah punya akun?',
-          style: yankeesStyle.copyWith(
-            fontSize: 16,
-            fontWeight: regular,
-          ),
-        ),
-        TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/sign-in');
-          },
-          child: Text(
-            'Masuk',
-            style: blueStyle.copyWith(
+    return Container(
+      margin: const EdgeInsets.only(top: 24),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Sudah punya akun?',
+            style: TextStyle(
+              color: kYankeesColor,
               fontSize: 16,
-              fontWeight: bold,
             ),
           ),
-        ),
-      ],
+          TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/sign-in');
+            },
+            child: Text(
+              'Masuk',
+              style: TextStyle(
+                color: kBlueColor,
+                fontSize: 16,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

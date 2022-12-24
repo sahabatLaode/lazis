@@ -49,7 +49,8 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
         // TITLE
         Text(
           'Atur ulang kata sandi',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 32,
             fontWeight: bold,
           ),
@@ -65,13 +66,17 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         decoration: InputDecoration.collapsed(
           hintText: 'Kata sandi baru',
-          hintStyle: yankees30Style.copyWith(
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
-            fontWeight: medium,
           ),
         ),
       ),
@@ -80,18 +85,22 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
 
   Widget confirmPasswordInput() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(top: 12, bottom: 32),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         decoration: InputDecoration.collapsed(
           hintText: 'Konfirmasi kata sandi',
-          hintStyle: yankees30Style.copyWith(
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
-            fontWeight: medium,
           ),
         ),
       ),
@@ -99,27 +108,23 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   }
 
   Widget loginButton() {
-    return Container(
-      margin: const EdgeInsets.only(top: 24),
-      height: 56,
-      width: double.infinity,
-      child: TextButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/sign-in');
-        },
-        style: TextButton.styleFrom(
-          backgroundColor: kCrayolaColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+    return TextButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/sign-in');
+      },
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.all(16),
+        backgroundColor: kCrayolaColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
         ),
-        child: Text(
-          'Simpan',
-          style: crayolaStyle.copyWith(
-            color: kCulturedColor,
-            fontSize: 18,
-            fontWeight: semibold,
-          ),
+      ),
+      child: Text(
+        'Simpan',
+        style: TextStyle(
+          color: kCulturedColor,
+          fontSize: 18,
+          fontWeight: semibold,
         ),
       ),
     );

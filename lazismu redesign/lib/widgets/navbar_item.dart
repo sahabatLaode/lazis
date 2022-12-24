@@ -57,7 +57,8 @@ class _NavbarItemState extends State<NavbarItem> {
               duration: Duration(milliseconds: 400),
               tabBackgroundColor: kCrayolaColor,
               color: kYankees50Color,
-              textStyle: culturedStyle.copyWith(
+              textStyle: TextStyle(
+                color: kCulturedColor,
                 fontSize: 16,
                 fontWeight: bold,
               ),

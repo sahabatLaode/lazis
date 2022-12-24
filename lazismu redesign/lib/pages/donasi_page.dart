@@ -14,7 +14,8 @@ class UserDonasi extends StatelessWidget {
         backgroundColor: kCulturedColor,
         title: Text(
           'Donasi',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 22,
             fontWeight: bold,
           ),
@@ -77,7 +78,8 @@ class UserDonasi extends StatelessWidget {
                     ),
                     Text(
                       'Zakat',
-                      style: yankeesStyle.copyWith(
+                      style: TextStyle(
+                        color: kYankeesColor,
                         fontSize: 16,
                         fontWeight: bold,
                       ),
@@ -143,7 +145,8 @@ class UserDonasi extends StatelessWidget {
                     ),
                     Text(
                       'Infaq/Sedekah',
-                      style: yankeesStyle.copyWith(
+                      style: TextStyle(
+                        color: kYankeesColor,
                         fontSize: 16,
                         fontWeight: bold,
                       ),

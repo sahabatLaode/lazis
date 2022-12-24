@@ -14,7 +14,8 @@ class UserLainnya extends StatelessWidget {
         backgroundColor: kCulturedColor,
         title: Text(
           'Lainnya',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 22,
             fontWeight: bold,
           ),
@@ -42,7 +43,8 @@ class UserLainnya extends StatelessWidget {
                         child: Center(
                           child: Text(
                             'LM',
-                            style: culturedStyle.copyWith(
+                            style: TextStyle(
+                              color: kCulturedColor,
                               fontSize: 36,
                               fontWeight: bold,
                             ),
@@ -58,7 +60,8 @@ class UserLainnya extends StatelessWidget {
                         children: [
                           Text(
                             "LM. Ma'rifatun",
-                            style: yankeesStyle.copyWith(
+                            style: TextStyle(
+                              color: kYankeesColor,
                               fontSize: 18,
                               fontWeight: bold,
                             ),
@@ -67,21 +70,27 @@ class UserLainnya extends StatelessWidget {
                             margin: const EdgeInsets.only(top: 6),
                             child: Text(
                               "081234567890",
-                              style: yankees30Style,
+                              style: TextStyle(
+                                color: kYankees30Color,
+                              ),
                             ),
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 3),
                             child: Text(
                               "123@gmail.com",
-                              style: yankees30Style,
+                              style: TextStyle(
+                                color: kYankees30Color,
+                              ),
                             ),
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 3),
                             child: Text(
                               "Ranting 1",
-                              style: yankees30Style,
+                              style: TextStyle(
+                                color: kYankees30Color,
+                              ),
                             ),
                           ),
                         ],
@@ -103,7 +112,9 @@ class UserLainnya extends StatelessWidget {
                     ),
                     child: Text(
                       "Lengkapi profil",
-                      style: culturedStyle,
+                      style: TextStyle(
+                        color: kCulturedColor,
+                      ),
                     ),
                   ),
                 ),
@@ -139,13 +150,14 @@ class UserLainnya extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 24),
+                                margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child: Image.asset('assets/icon_profil.png'),
                               ),
                               Text(
                                 'Profil',
-                                style: yankeesStyle.copyWith(
+                                style: TextStyle(
+                                  color: kYankeesColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -155,7 +167,7 @@ class UserLainnya extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.chevron_right),
+                                icon: const Icon(Icons.chevron_right),
                                 color: kYankees30Color,
                               ),
                             ],
@@ -170,14 +182,15 @@ class UserLainnya extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 24),
+                                margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child:
                                     Image.asset('assets/icon_pengaturan.png'),
                               ),
                               Text(
                                 'Pengaturan',
-                                style: yankeesStyle.copyWith(
+                                style: TextStyle(
+                                  color: kYankeesColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -187,7 +200,7 @@ class UserLainnya extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.chevron_right),
+                                icon: const Icon(Icons.chevron_right),
                                 color: kYankees30Color,
                               ),
                             ],
@@ -202,13 +215,14 @@ class UserLainnya extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 24),
+                                margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child: Image.asset('assets/icon_bantuan.png'),
                               ),
                               Text(
                                 'Bantuan',
-                                style: yankeesStyle.copyWith(
+                                style: TextStyle(
+                                  color: kYankeesColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -218,7 +232,7 @@ class UserLainnya extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.chevron_right),
+                                icon: const Icon(Icons.chevron_right),
                                 color: kYankees30Color,
                               ),
                             ],
@@ -233,13 +247,14 @@ class UserLainnya extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 24),
+                                margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child: Image.asset('assets/icon_syarat.png'),
                               ),
                               Text(
                                 'Syarat dan ketentuan',
-                                style: yankeesStyle.copyWith(
+                                style: TextStyle(
+                                  color: kYankeesColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -249,7 +264,7 @@ class UserLainnya extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.chevron_right),
+                                icon: const Icon(Icons.chevron_right),
                                 color: kYankees30Color,
                               ),
                             ],
@@ -264,14 +279,15 @@ class UserLainnya extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 24),
+                                margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child: Image.asset(
                                     'assets/logo_lazismu_oranye.png'),
                               ),
                               Text(
                                 'Tentang LazisMu',
-                                style: yankeesStyle.copyWith(
+                                style: TextStyle(
+                                  color: kYankeesColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -281,7 +297,7 @@ class UserLainnya extends StatelessWidget {
                             children: [
                               IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.chevron_right),
+                                icon: const Icon(Icons.chevron_right),
                                 color: kYankees30Color,
                               ),
                             ],

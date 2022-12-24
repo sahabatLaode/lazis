@@ -47,7 +47,8 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
               child: Text(
                 "Donasimu adalah hadiah untuk lainnya",
                 textAlign: TextAlign.center,
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 28,
                   fontWeight: bold,
                 ),
@@ -60,7 +61,9 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
               child: Text(
                 "Dengan berdonasi, anda telah ikut serta dalam mendorong keadilan sosial, pembangunan manusia dan ikut dalam mengentaskan kemiskinan.",
                 textAlign: TextAlign.center,
-                style: yankeesStyle,
+                style: TextStyle(
+                  color: kYankeesColor,
+                ),
               ),
             ),
 
@@ -82,7 +85,8 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
                 ),
                 child: Text(
                   'Mulai',
-                  style: culturedStyle.copyWith(
+                  style: TextStyle(
+                    color: kCulturedColor,
                     fontSize: 18,
                     fontWeight: bold,
                   ),

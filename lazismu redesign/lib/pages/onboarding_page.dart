@@ -47,7 +47,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
               child: Text(
                 "Selamat datang di lazismu banguntapan selatan",
                 textAlign: TextAlign.center,
-                style: yankeesStyle.copyWith(
+                style: TextStyle(
+                  color: kYankeesColor,
                   fontSize: 28,
                   fontWeight: bold,
                 ),
@@ -60,7 +61,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
               child: Text(
                 "Salurkan zakat, infaq dan sedekahmu.\nDengan berdonasi anda telah ikut serta dalam mengentaskan kemiskinan.",
                 textAlign: TextAlign.center,
-                style: yankeesStyle,
+                style: TextStyle(
+                  color: kYankeesColor,
+                ),
               ),
             ),
 
@@ -82,7 +85,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ),
                 child: Text(
                   'Masuk',
-                  style: culturedStyle.copyWith(
+                  style: TextStyle(
+                    color: kCulturedColor,
                     fontSize: 18,
                     fontWeight: bold,
                   ),
@@ -110,7 +114,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ),
                 child: Text(
                   'Daftar',
-                  style: crayolaStyle.copyWith(
+                  style: TextStyle(
+                    color: kCrayolaColor,
                     fontSize: 18,
                     fontWeight: bold,
                   ),

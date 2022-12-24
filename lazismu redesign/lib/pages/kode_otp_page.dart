@@ -48,7 +48,8 @@ class _ResetPasswordPageState extends State<KodeOtpPage> {
         // TITLE
         Text(
           'Kode OTP',
-          style: yankeesStyle.copyWith(
+          style: TextStyle(
+            color: kYankeesColor,
             fontSize: 32,
             fontWeight: bold,
           ),
@@ -59,19 +60,23 @@ class _ResetPasswordPageState extends State<KodeOtpPage> {
 
   Widget emailInput() {
     return Container(
-      margin: const EdgeInsets.only(top: 24),
+      margin: const EdgeInsets.only(top: 24, bottom: 32),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          width: 1,
+          color: kYankees50Color,
+        ),
       ),
       child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration.collapsed(
-          hintText: 'Kode OTP',
-          hintStyle: yankees30Style.copyWith(
+          hintText: 'Masukkan OTP',
+          hintStyle: TextStyle(
+            color: kYankees30Color,
             fontSize: 16,
-            fontWeight: medium,
           ),
         ),
       ),
@@ -79,27 +84,23 @@ class _ResetPasswordPageState extends State<KodeOtpPage> {
   }
 
   Widget loginButton() {
-    return Container(
-      margin: const EdgeInsets.only(top: 24),
-      height: 56,
-      width: double.infinity,
-      child: TextButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/reset-password');
-        },
-        style: TextButton.styleFrom(
-          backgroundColor: kCrayolaColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
+    return TextButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/reset-password');
+      },
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.all(16),
+        backgroundColor: kCrayolaColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
         ),
-        child: Text(
-          'Lanjutkan',
-          style: crayolaStyle.copyWith(
-            color: kCulturedColor,
-            fontSize: 18,
-            fontWeight: semibold,
-          ),
+      ),
+      child: Text(
+        'Lanjutkan',
+        style: TextStyle(
+          color: kCulturedColor,
+          fontSize: 18,
+          fontWeight: bold,
         ),
       ),
     );
