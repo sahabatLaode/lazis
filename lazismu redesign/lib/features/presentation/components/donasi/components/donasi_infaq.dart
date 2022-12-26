@@ -1,15 +1,15 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../../../../../theme.dart';
 
-class PermintaanKoinSurga extends StatefulWidget {
-  const PermintaanKoinSurga({super.key});
+class DonasiInfaqPage extends StatefulWidget {
+  const DonasiInfaqPage({super.key});
 
   @override
-  State<PermintaanKoinSurga> createState() => _PermintaanKoinSurgaState();
+  State<DonasiInfaqPage> createState() => _DonasiInfaqPageState();
 }
 
-class _PermintaanKoinSurgaState extends State<PermintaanKoinSurga> {
+class _DonasiInfaqPageState extends State<DonasiInfaqPage> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
@@ -31,7 +31,7 @@ class _PermintaanKoinSurgaState extends State<PermintaanKoinSurga> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Permintaan Koin Surga',
+              'Donasi Infaq/Sedekah',
               style: TextStyle(
                 color: kYankeesColor,
                 fontSize: 20,

@@ -1,15 +1,15 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../../../../../theme.dart';
 
-class DonasiZakatPage extends StatefulWidget {
-  const DonasiZakatPage({super.key});
+class PermintaanKoinSurga extends StatefulWidget {
+  const PermintaanKoinSurga({super.key});
 
   @override
-  State<DonasiZakatPage> createState() => _DonasiZakatPageState();
+  State<PermintaanKoinSurga> createState() => _PermintaanKoinSurgaState();
 }
 
-class _DonasiZakatPageState extends State<DonasiZakatPage> {
+class _PermintaanKoinSurgaState extends State<PermintaanKoinSurga> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
@@ -31,7 +31,7 @@ class _DonasiZakatPageState extends State<DonasiZakatPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Donasi Zakat',
+              'Permintaan Koin Surga',
               style: TextStyle(
                 color: kYankeesColor,
                 fontSize: 20,
@@ -256,8 +256,7 @@ class _DonasiZakatPageState extends State<DonasiZakatPage> {
               Text(
                 'Bank Bantul',
                 style: TextStyle(
-                      color: kYankeesColor,
-                    
+                  color: kYankeesColor,
                   fontWeight: bold,
                 ),
               ),

@@ -1,15 +1,15 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../../../../../theme.dart';
 
-class DonasiInfaqPage extends StatefulWidget {
-  const DonasiInfaqPage({super.key});
+class PermintaanAmbulanPage extends StatefulWidget {
+  const PermintaanAmbulanPage({super.key});
 
   @override
-  State<DonasiInfaqPage> createState() => _DonasiInfaqPageState();
+  State<PermintaanAmbulanPage> createState() => _PermintaanAmbulanPageState();
 }
 
-class _DonasiInfaqPageState extends State<DonasiInfaqPage> {
+class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
@@ -31,9 +31,10 @@ class _DonasiInfaqPageState extends State<DonasiInfaqPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Donasi Infaq/Sedekah',
+              'Permintaan Ambulan',
               style: TextStyle(
-                color: kYankeesColor,
+                      color: kYankeesColor,
+                    
                 fontSize: 20,
                 fontWeight: semibold,
               ),
@@ -276,8 +277,8 @@ class _DonasiInfaqPageState extends State<DonasiInfaqPage> {
               Text(
                 '20 Desember 2022',
                 style: TextStyle(
-                  color: kYankees30Color,
-                ),
+              color: kYankees30Color,
+            ),
               ),
               ElevatedButton(
                 onPressed: () {},

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:lazismu/pages/aktivitas_page.dart';
-import 'package:lazismu/pages/donasi_page.dart';
-import 'package:lazismu/pages/home_page.dart';
-import 'package:lazismu/pages/lainnya_page.dart';
-import 'package:lazismu/pages/permintaan_page.dart';
+import 'package:lazismu/features/presentation/components/aktivitas/aktivitas_page.dart';
+import 'package:lazismu/features/presentation/components/donasi/core/donasi_page.dart';
+import 'package:lazismu/features/presentation/components/beranda/core/home_page.dart';
+import 'package:lazismu/features/presentation/components/lainnya/core/lainnya_page.dart';
+import 'package:lazismu/features/presentation/components/permintaan/core/permintaan_page.dart';
 import 'package:lazismu/theme.dart';
 
 class NavbarItem extends StatefulWidget {

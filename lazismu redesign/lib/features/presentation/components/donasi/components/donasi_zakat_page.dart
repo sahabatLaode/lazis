@@ -1,15 +1,15 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import '../theme.dart';
+import '../../../../../theme.dart';
 
-class PermintaanAmbulanPage extends StatefulWidget {
-  const PermintaanAmbulanPage({super.key});
+class DonasiZakatPage extends StatefulWidget {
+  const DonasiZakatPage({super.key});
 
   @override
-  State<PermintaanAmbulanPage> createState() => _PermintaanAmbulanPageState();
+  State<DonasiZakatPage> createState() => _DonasiZakatPageState();
 }
 
-class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
+class _DonasiZakatPageState extends State<DonasiZakatPage> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
@@ -31,10 +31,9 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Permintaan Ambulan',
+              'Donasi Zakat',
               style: TextStyle(
-                      color: kYankeesColor,
-                    
+                color: kYankeesColor,
                 fontSize: 20,
                 fontWeight: semibold,
               ),
@@ -257,7 +256,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
               Text(
                 'Bank Bantul',
                 style: TextStyle(
-                  color: kYankeesColor,
+                      color: kYankeesColor,
+                    
                   fontWeight: bold,
                 ),
               ),
@@ -277,8 +277,8 @@ class _PermintaanAmbulanPageState extends State<PermintaanAmbulanPage> {
               Text(
                 '20 Desember 2022',
                 style: TextStyle(
-              color: kYankees30Color,
-            ),
+                  color: kYankees30Color,
+                ),
               ),
               ElevatedButton(
                 onPressed: () {},
