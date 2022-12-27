@@ -29,7 +29,7 @@ class UserDonasi extends StatelessWidget {
             height: 170,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/image_donasi.png'),
+                image: AssetImage('assets/images/image_donasi.png'),
               ),
             ),
           ),

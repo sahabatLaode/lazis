@@ -28,7 +28,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
           title(),
           passwordInput(),
           confirmPasswordInput(),
-          loginButton(),
+          saveButton(),
         ],
       ),
     );
@@ -41,7 +41,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
         // ILUSTRASI
         Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
-          child: Image.asset("assets/image_OTP.png"),
+          child: Image.asset("assets/images/image_OTP.png"),
         ),
 
         const SizedBox(height: 24),
@@ -62,7 +62,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
   Widget passwordInput() {
     return Container(
       margin: const EdgeInsets.only(top: 24),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -85,8 +85,8 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
 
   Widget confirmPasswordInput() {
     return Container(
-      margin: const EdgeInsets.only(top: 12, bottom: 32),
-      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -107,24 +107,27 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     );
   }
 
-  Widget loginButton() {
-    return TextButton(
-      onPressed: () {
-        Navigator.pushNamed(context, '/sign-in');
-      },
-      style: TextButton.styleFrom(
-        padding: const EdgeInsets.all(16),
-        backgroundColor: kCrayolaColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
+  Widget saveButton() {
+    return Container(
+      margin: const EdgeInsets.only(top: 32),
+      height: 56,
+      child: TextButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/sign-in');
+        },
+        style: TextButton.styleFrom(
+          backgroundColor: kCrayolaColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
         ),
-      ),
-      child: Text(
-        'Simpan',
-        style: TextStyle(
-          color: kCulturedColor,
-          fontSize: 18,
-          fontWeight: semibold,
+        child: Text(
+          'Simpan',
+          style: TextStyle(
+            color: kCulturedColor,
+            fontSize: 18,
+            fontWeight: semibold,
+          ),
         ),
       ),
     );

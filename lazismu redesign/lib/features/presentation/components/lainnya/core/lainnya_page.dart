@@ -28,7 +28,11 @@ class UserLainnya extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                  padding: const EdgeInsets.only(
+                    left: 24,
+                    right: 24,
+                    top: 24,
+                  ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -152,7 +156,8 @@ class UserLainnya extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(right: 24),
                                 width: 24,
-                                child: Image.asset('assets/icon_profil.png'),
+                                child:
+                                    Image.asset('assets/icons/icon_profil.png'),
                               ),
                               Text(
                                 'Profil',
@@ -184,8 +189,8 @@ class UserLainnya extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(right: 24),
                                 width: 24,
-                                child:
-                                    Image.asset('assets/icon_pengaturan.png'),
+                                child: Image.asset(
+                                    'assets/icons/icon_pengaturan.png'),
                               ),
                               Text(
                                 'Pengaturan',
@@ -217,7 +222,8 @@ class UserLainnya extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(right: 24),
                                 width: 24,
-                                child: Image.asset('assets/icon_bantuan.png'),
+                                child: Image.asset(
+                                    'assets/icons/icon_bantuan.png'),
                               ),
                               Text(
                                 'Bantuan',
@@ -249,7 +255,8 @@ class UserLainnya extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(right: 24),
                                 width: 24,
-                                child: Image.asset('assets/icon_syarat.png'),
+                                child:
+                                    Image.asset('assets/icons/icon_syarat.png'),
                               ),
                               Text(
                                 'Syarat dan ketentuan',
@@ -282,7 +289,7 @@ class UserLainnya extends StatelessWidget {
                                 margin: const EdgeInsets.only(right: 24),
                                 width: 24,
                                 child: Image.asset(
-                                    'assets/logo_lazismu_oranye.png'),
+                                    'assets/logos/logo_lazismu_oranye.png'),
                               ),
                               Text(
                                 'Tentang LazisMu',

@@ -57,7 +57,8 @@ class UserAktivitas extends StatelessWidget {
                     children: [
                       SizedBox(
                         height: 220,
-                        child: Image.asset('assets/image_no_activity.png'),
+                        child:
+                            Image.asset('assets/images/image_no_activity.png'),
                       ),
                       const SizedBox(
                         height: 48,
@@ -88,7 +89,8 @@ class UserAktivitas extends StatelessWidget {
                       children: [
                         Container(
                           height: 220,
-                          child: Image.asset('assets/image_no_activity.png'),
+                          child: Image.asset(
+                              'assets/images/image_no_activity.png'),
                         ),
                         SizedBox(
                           height: 48,

@@ -31,16 +31,24 @@ class UserPermintaan extends StatelessWidget {
             height: 150,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/image_permintaan.png'),
+                image: AssetImage('assets/images/image_permintaan.png'),
               ),
             ),
           ),
 
           // PERMINTAAN AMBULAN
           Container(
-            margin: const EdgeInsets.only(left: 16, right: 16, top: 70),
-            padding:
-                const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+              top: 70,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -59,7 +67,7 @@ class UserPermintaan extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset('assets/icon_ambulan.png'),
+                    Image.asset('assets/icons/icon_ambulan.png'),
                     const SizedBox(
                       width: 24,
                     ),
@@ -141,9 +149,17 @@ class UserPermintaan extends StatelessWidget {
 
           // PERMINTAAN KOIN SURGA
           Container(
-            margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
-            padding:
-                const EdgeInsets.only(left: 24, right: 12, top: 24, bottom: 24),
+            margin: const EdgeInsets.only(
+              left: 24,
+              right: 24,
+              top: 24,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
             width: double.infinity,
             height: 86,
             decoration: BoxDecoration(
@@ -162,7 +178,7 @@ class UserPermintaan extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset('assets/icon_koin.png'),
+                    Image.asset('assets/icons/icon_koin.png'),
                     const SizedBox(
                       width: 24,
                     ),

@@ -52,7 +52,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
         // ILUSTRASI
         Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
-          child: Image.asset("assets/image_signup.png"),
+          child: Image.asset("assets/images/image_signup.png"),
         ),
 
         const SizedBox(height: 24),
@@ -73,7 +73,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
   Widget nameInput() {
     return Container(
       margin: const EdgeInsets.only(top: 24),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -96,7 +96,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
   Widget emailInput() {
     return Container(
       margin: const EdgeInsets.only(top: 12),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -125,7 +125,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
       children: [
         Container(
           margin: const EdgeInsets.only(top: 12),
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -142,7 +142,7 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
                 height: 24,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/icon_bendera.png'),
+                    image: AssetImage('assets/icons/icon_bendera.png'),
                   ),
                 ),
               ),
@@ -176,52 +176,54 @@ class _SignUpPageNewState extends State<SignUpPageNew> {
             ],
           ),
         ),
-        const SizedBox(height: 32),
       ],
     );
   }
 
   Widget signUpButton() {
-    return TextButton(
-      onPressed: () {
-        Navigator.pushReplacementNamed(context, '/homeboarding');
-        // setState(() {
-        //   isLoading = true;
-        // });
+    return Container(
+      margin: const EdgeInsets.only(top: 32),
+      height: 56,
+      child: TextButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, '/homeboarding');
+          // setState(() {
+          //   isLoading = true;
+          // });
 
-        // Future.delayed(const Duration(seconds: 2), () {
-        //   setState(() {
-        //     isLoading = false;
-        //   });
-        //   if (passwordController.text != '12345') {
-        //     setState(() {
-        //       isShowPasswordError = true;
-        //     });
-        //   } else {
-        //     Navigator.pushNamed(context, '/homeboarding');
-        //   }
-        // });
-      },
-      style: TextButton.styleFrom(
-        padding: const EdgeInsets.all(16),
-        backgroundColor: kCrayolaColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
+          // Future.delayed(const Duration(seconds: 2), () {
+          //   setState(() {
+          //     isLoading = false;
+          //   });
+          //   if (passwordController.text != '12345') {
+          //     setState(() {
+          //       isShowPasswordError = true;
+          //     });
+          //   } else {
+          //     Navigator.pushNamed(context, '/homeboarding');
+          //   }
+          // });
+        },
+        style: TextButton.styleFrom(
+          backgroundColor: kCrayolaColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
         ),
-      ),
-      child: isLoading
-          ? CircularProgressIndicator(
-              color: kCulturedColor,
-              backgroundColor: kYankees50Color,
-            )
-          : Text(
-              'Daftar',
-              style: TextStyle(
+        child: isLoading
+            ? CircularProgressIndicator(
                 color: kCulturedColor,
-                fontSize: 18,
-                fontWeight: bold,
+                backgroundColor: kYankees50Color,
+              )
+            : Text(
+                'Daftar',
+                style: TextStyle(
+                  color: kCulturedColor,
+                  fontSize: 18,
+                  fontWeight: bold,
+                ),
               ),
-            ),
+      ),
     );
   }
 

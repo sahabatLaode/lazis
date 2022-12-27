@@ -13,6 +13,16 @@ class _UserHomeState extends State<UserHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kCulturedColor,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: kCrayolaColor,
+        title: Image.asset(
+          'assets/logos/logo_lazismu_putih.png',
+          width: 84,
+        ),
+      ),
 
       // Tombol ambulan darurat
       // floatingActionButton: FloatingActionButton.extended(
@@ -31,7 +41,6 @@ class _UserHomeState extends State<UserHome> {
       //   backgroundColor: kRedColor,
       // ),
       body: ListView(
-        // padding: const EdgeInsets.only(bottom: 80),
         children: [
           donasiSaya(),
           macamDonasi(),
@@ -47,13 +56,20 @@ class _UserHomeState extends State<UserHome> {
       children: [
         // BACKGROUND JINGGA
         Container(
-          // width: dou,
-          height: 64,
+          height: 54,
           color: kCrayolaColor,
         ),
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 18),
+          margin: const EdgeInsets.only(
+            left: 16,
+            right: 16,
+            top: 12,
+            bottom: 24,
+          ),
+          padding: const EdgeInsets.symmetric(
+            vertical: 14,
+            horizontal: 18,
+          ),
           height: 80,
           decoration: BoxDecoration(
             color: kCulturedColor,
@@ -79,7 +95,7 @@ class _UserHomeState extends State<UserHome> {
                       color: kYankeesColor,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 12),
                   Text(
                     '0',
                     style: TextStyle(
@@ -111,7 +127,7 @@ class _UserHomeState extends State<UserHome> {
                       color: kYankeesColor,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 12),
                   Text(
                     '0',
                     style: TextStyle(
@@ -156,7 +172,7 @@ class _UserHomeState extends State<UserHome> {
                   Navigator.pushNamed(context, '/donasi-zakat');
                 },
                 icon: Image.asset(
-                  'assets/icon_zakat.png',
+                  'assets/icons/icon_zakat.png',
                 ),
               ),
             ),
@@ -193,7 +209,7 @@ class _UserHomeState extends State<UserHome> {
                   Navigator.pushNamed(context, '/donasi-infaq');
                 },
                 icon: Image.asset(
-                  'assets/icon_infaq.png',
+                  'assets/icons/icon_infaq.png',
                 ),
               ),
             ),
@@ -230,7 +246,7 @@ class _UserHomeState extends State<UserHome> {
                   Navigator.pushNamed(context, '/permintaan-koin');
                 },
                 icon: Image.asset(
-                  'assets/icon_koin_surga.png',
+                  'assets/icons/icon_koin_surga.png',
                 ),
               ),
             ),
@@ -250,7 +266,10 @@ class _UserHomeState extends State<UserHome> {
 
   Widget informasi() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 24,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -297,7 +316,11 @@ class _UserHomeState extends State<UserHome> {
                   // INFORMASI KEGIATAN
                   Padding(
                     padding: const EdgeInsets.only(
-                        right: 12, left: 3, top: 3, bottom: 3),
+                      right: 12,
+                      left: 3,
+                      top: 3,
+                      bottom: 3,
+                    ),
                     child: Container(
                       width: 180,
                       height: 160,
@@ -321,7 +344,8 @@ class _UserHomeState extends State<UserHome> {
                               onPressed: () {
                                 Navigator.pushNamed(context, '/kegiatan');
                               },
-                              icon: Image.asset('assets/image_kegiatan.png'),
+                              icon: Image.asset(
+                                  'assets/images/image_kegiatan.png'),
                             ),
                           ),
                           Container(
@@ -377,7 +401,8 @@ class _UserHomeState extends State<UserHome> {
                               onPressed: () {
                                 Navigator.pushNamed(context, '/layanan');
                               },
-                              icon: Image.asset('assets/image_layanan.png'),
+                              icon: Image.asset(
+                                  'assets/images/image_layanan.png'),
                             ),
                           ),
                           Container(
@@ -433,7 +458,8 @@ class _UserHomeState extends State<UserHome> {
                               onPressed: () {
                                 Navigator.pushNamed(context, '/asnaf');
                               },
-                              icon: Image.asset('assets/image_asnaf.png'),
+                              icon:
+                                  Image.asset('assets/images/image_asnaf.png'),
                             ),
                           ),
                           Container(
@@ -547,7 +573,8 @@ class _UserHomeState extends State<UserHome> {
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/image_berita1.jpg'),
+                                image: AssetImage(
+                                    'assets/images/image_berita1.jpg'),
                               ),
                             ),
                           ),
@@ -593,7 +620,8 @@ class _UserHomeState extends State<UserHome> {
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/image_berita1.jpg'),
+                                image: AssetImage(
+                                    'assets/images/image_berita1.jpg'),
                               ),
                             ),
                           ),
@@ -639,7 +667,8 @@ class _UserHomeState extends State<UserHome> {
                               borderRadius: BorderRadius.circular(12),
                               image: const DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/image_berita1.jpg'),
+                                image: AssetImage(
+                                    'assets/images/image_berita1.jpg'),
                               ),
                             ),
                           ),

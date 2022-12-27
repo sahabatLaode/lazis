@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: kCulturedColor,
       body: Center(
         child: Image.asset(
-          'assets/logo_lazismu.png',
+          'assets/logos/logo_lazismu.png',
           width: 204,
           height: 135,
         ),

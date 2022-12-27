@@ -49,7 +49,7 @@ class _SignInPageState extends State<SignInPage> {
         // ILUSTRASI
         Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
-          child: Image.asset("assets/image_signin.png"),
+          child: Image.asset("assets/images/image_signin.png"),
         ),
 
         const SizedBox(height: 24),
@@ -70,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget emailInput() {
     return Container(
       margin: const EdgeInsets.only(top: 24),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
@@ -99,7 +99,7 @@ class _SignInPageState extends State<SignInPage> {
       children: [
         Container(
           margin: const EdgeInsets.only(top: 12),
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -142,51 +142,54 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ),
           ),
-        const SizedBox(height: 32),
       ],
     );
   }
 
   Widget loginButton() {
-    return TextButton(
-      onPressed: () {
-        setState(() {
-          isLoading = true;
-        });
-
-        Future.delayed(const Duration(seconds: 2), () {
+    return Container(
+      margin: const EdgeInsets.only(top: 32),
+      height: 56,
+      width: double.infinity,
+      child: TextButton(
+        onPressed: () {
           setState(() {
-            isLoading = false;
+            isLoading = true;
           });
-          if (passwordController.text != '12345') {
+
+          Future.delayed(const Duration(seconds: 2), () {
             setState(() {
-              isShowPasswordError = true;
+              isLoading = false;
             });
-          } else {
-            Navigator.pushReplacementNamed(context, '/navbar');
-          }
-        });
-      },
-      style: TextButton.styleFrom(
-        padding: const EdgeInsets.all(16),
-        backgroundColor: kCrayolaColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
+            if (passwordController.text != '12345') {
+              setState(() {
+                isShowPasswordError = true;
+              });
+            } else {
+              Navigator.pushReplacementNamed(context, '/navbar');
+            }
+          });
+        },
+        style: TextButton.styleFrom(
+          backgroundColor: kCrayolaColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
         ),
-      ),
-      child: isLoading
-          ? CircularProgressIndicator(
-              color: kCulturedColor,
-              backgroundColor: kYankees50Color,
-            )
-          : Text(
-              'Masuk',
-              style: TextStyle(
+        child: isLoading
+            ? CircularProgressIndicator(
                 color: kCulturedColor,
-                fontSize: 18,
-                fontWeight: bold,
+                backgroundColor: kYankees50Color,
+              )
+            : Text(
+                'Masuk',
+                style: TextStyle(
+                  color: kCulturedColor,
+                  fontSize: 18,
+                  fontWeight: bold,
+                ),
               ),
-            ),
+      ),
     );
   }
 

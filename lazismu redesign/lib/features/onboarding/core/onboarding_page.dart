@@ -23,7 +23,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'assets/logo_lazismu.png',
+                    'assets/logos/logo_lazismu.png',
                     width: 72,
                   ),
                 ],
@@ -38,7 +38,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 bottom: 40,
                 top: 80,
               ),
-              child: Image.asset("assets/iklan.png"),
+              child: Image.asset("assets/images/image_onboarding.png"),
             ),
 
             // JUDUL
@@ -70,14 +70,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
             const Spacer(),
 
             // TOMBOL MASUK
-            SizedBox(
+            Container(
+              margin: EdgeInsets.only(bottom: 12),
               width: double.infinity,
+              height: 56,
               child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/sign-in');
                 },
                 style: TextButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
                   backgroundColor: kCrayolaColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14),
@@ -94,17 +95,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
             ),
 
-            const SizedBox(height: 12),
-
             // TOMBOL DAFTAR
             SizedBox(
               width: double.infinity,
+              height: 56,
               child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/sign-up-new');
                 },
                 style: TextButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14),
                     side: BorderSide(

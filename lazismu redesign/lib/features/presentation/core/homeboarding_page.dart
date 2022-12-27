@@ -23,7 +23,7 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'assets/logo_lazismu.png',
+                    'assets/logos/logo_lazismu.png',
                     width: 72,
                   ),
                 ],
@@ -38,7 +38,7 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
                 bottom: 40,
                 top: 80,
               ),
-              child: Image.asset("assets/image_iklan4.png"),
+              child: Image.asset("assets/images/image_homeboarding.png"),
             ),
 
             // JUDUL
@@ -72,12 +72,12 @@ class _HomeboardingPageState extends State<HomeboardingPage> {
             // TOMBOL MASUK
             SizedBox(
               width: double.infinity,
+              height: 56,
               child: TextButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/navbar');
                 },
                 style: TextButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
                   backgroundColor: kCrayolaColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14),

@@ -32,7 +32,7 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
         children: [
           title(),
           emailInput(),
-          loginButton(),
+          sendButton(),
         ],
       ),
     );
@@ -45,7 +45,7 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
         // ILUSTRASI
         Padding(
           padding: const EdgeInsets.only(left: 24, right: 24),
-          child: Image.asset("assets/image_lupa_sandi.png"),
+          child: Image.asset("assets/images/image_lupa_sandi.png"),
         ),
 
         const SizedBox(height: 24),
@@ -79,7 +79,7 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
         // EMAIL INPUT
         Container(
           margin: const EdgeInsets.only(top: 24),
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
             color: kLavenderBlushColor,
             borderRadius: BorderRadius.circular(14),
@@ -104,7 +104,7 @@ class _ResetPasswordPageState extends State<ForgotPasswordPage> {
     );
   }
 
-  Widget loginButton() {
+  Widget sendButton() {
     return Container(
       margin: const EdgeInsets.only(top: 24),
       height: 56,
