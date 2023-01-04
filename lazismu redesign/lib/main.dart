@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:lazismu/features/presentation/components/beranda/components/asnaf_page.dart';
-import 'package:lazismu/features/presentation/components/donasi/components/donasi_infaq.dart';
-import 'package:lazismu/features/presentation/components/donasi/components/donasi_zakat_page.dart';
-import 'package:lazismu/features/presentation/components/beranda/core/home_page.dart';
-import 'package:lazismu/features/presentation/components/beranda/components/kegiatan_page.dart';
-import 'package:lazismu/features/onboarding/core/onboarding_page.dart';
-import 'package:lazismu/features/presentation/components/permintaan/components/permintaan_ambulan.dart';
-import 'package:lazismu/features/presentation/components/permintaan/components/permintaan_koin.dart';
-import 'package:lazismu/features/sign%20in/sign_in_page.dart';
-import 'package:lazismu/features/onboarding/splash_page.dart';
-import 'package:lazismu/features/presentation/core/homeboarding_page.dart';
-import 'package:lazismu/features/forgot%20password/core/forgot_password_page.dart';
-import 'package:lazismu/features/presentation/components/beranda/components/layanan_page.dart';
-import 'package:lazismu/widgets/navbar_item.dart';
-import 'features/forgot password/components/kode_otp_page.dart';
-import 'features/forgot password/components/reset_password.dart';
-import 'features/sign up/sign_up_page.dart';
-import 'features/sign up/sign_up_page_new.dart';
+import 'package:lazismu/Navbar/Components/Beranda/Widgets/asnaf_widget.dart';
+import 'package:lazismu/Navbar/Components/Beranda/Widgets/kegiatan_widget.dart';
+import 'package:lazismu/Navbar/Components/Beranda/Widgets/layanan_widget.dart';
+import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_infaq_widget.dart';
+import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_zakat_widget.dart';
+import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_ambulan_widget.dart';
+import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_koin_widget.dart';
+import 'package:lazismu/Onboarding/onboarding.dart';
+import 'package:lazismu/Sign%20In/sign_in.dart';
+import 'package:lazismu/Splashpage/splash_page.dart';
+import 'package:lazismu/Homeboarding/homeboarding.dart';
+import 'package:lazismu/Forgot%20Password/forgot_password.dart';
+import 'package:lazismu/Navbar/navbar_item.dart';
+import 'Sign Up/sign_up.dart';
+import 'Forgot Password/kode_otp.dart';
+import 'Forgot Password/reset_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,23 +29,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
-        '/onboarding': (context) => const OnboardingPage(),
-        '/sign-in': (context) => const SignInPage(),
-        '/sign-up': (context) => const SignUpPage(),
-        '/home': (context) => const UserHome(),
-        '/sign-up-new': (context) => const SignUpPageNew(),
-        '/homeboarding': (context) => const HomeboardingPage(),
-        '/forgotpassword': (context) => const ForgotPasswordPage(),
-        '/kode-otp': (context) => const KodeOtpPage(),
-        '/reset-password': (context) => const ResetPasswordPage(),
-        '/kegiatan': (context) => const KegiatanPage(),
-        '/layanan': (context) => const LayananPage(),
-        '/asnaf': (context) => const AsnafPage(),
+        '/onboarding': (context) => const Onboarding(),
+        '/sign-in': (context) => const SignIn(),
+        '/sign-up': (context) => const SignUp(),
+        '/homeboarding': (context) => const Homeboarding(),
+        '/forgotpassword': (context) => const ForgotPassword(),
+        '/kode-otp': (context) => const KodeOtp(),
+        '/reset-password': (context) => const ResetPassword(),
+        '/kegiatan': (context) => const KegiatanWidget(),
+        '/layanan': (context) => const LayananWidget(),
+        '/asnaf': (context) => const AsnafWidget(),
         '/navbar': (context) => const NavbarItem(),
-        '/donasi-zakat': (context) => const DonasiZakatPage(),
-        '/donasi-infaq': (context) => const DonasiInfaqPage(),
-        '/permintaan-ambulan': (context) => const PermintaanAmbulanPage(),
-        '/permintaan-koin': (context) => const PermintaanKoinSurga(),
+        '/donasi-zakat': (context) => const DonasiZakatWidget(),
+        '/donasi-infaq': (context) => const DonasiInfaqWidget(),
+        '/permintaan-ambulan': (context) => const PermintaanAmbulanWidget(),
+        '/permintaan-koin': (context) => const PermintaanKoinWidget(),
       },
     );
   }
