@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lazismu/Navbar/Components/Beranda/Widgets/asnaf_widget.dart';
 import 'package:lazismu/Navbar/Components/Beranda/Widgets/kegiatan_widget.dart';
-import 'package:lazismu/Navbar/Components/Beranda/Widgets/layanan_widget.dart';
 import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_infaq_widget.dart';
 import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_zakat_widget.dart';
 import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_ambulan_widget.dart';
@@ -37,7 +36,6 @@ class MyApp extends StatelessWidget {
         '/kode-otp': (context) => const KodeOtp(),
         '/reset-password': (context) => const ResetPassword(),
         '/kegiatan': (context) => const KegiatanWidget(),
-        '/layanan': (context) => const LayananWidget(),
         '/asnaf': (context) => const AsnafWidget(),
         '/navbar': (context) => const NavbarItem(),
         '/donasi-zakat': (context) => const DonasiZakatWidget(),

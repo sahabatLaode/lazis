@@ -333,7 +333,7 @@ class _BerandaState extends State<Beranda> {
                   // INFORMASI KEGIATAN
                   Padding(
                     padding: const EdgeInsets.only(
-                      right: 12,
+                      right: 8,
                       left: 3,
                       top: 3,
                       bottom: 3,
@@ -382,7 +382,7 @@ class _BerandaState extends State<Beranda> {
                                 style: TextStyle(
                                   color: kYankeesColor,
                                   fontSize: 20,
-                                  fontWeight: bold,
+                                  fontWeight: medium,
                                 ),
                               ),
                             ),
@@ -417,96 +417,11 @@ class _BerandaState extends State<Beranda> {
                     ),
                   ),
 
-                  // INFORMASI LAYANAN
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      right: 6,
-                      left: 6,
-                    ),
-                    child: InkWell(
-                      child: Container(
-                        width: 180,
-                        height: 160,
-                        decoration: BoxDecoration(
-                          color: kLavenderBlushColor,
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 2,
-                              spreadRadius: 1,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(
-                            12,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            SizedBox(
-                              width: double.infinity,
-                              height: 114,
-                              child: IconButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                    context,
-                                    '/layanan',
-                                  );
-                                },
-                                icon: Image.asset(
-                                  'assets/images/image_layanan.png',
-                                ),
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(
-                                left: 12,
-                                top: 118,
-                              ),
-                              child: Text(
-                                'Layanan',
-                                style: TextStyle(
-                                  color: kYankeesColor,
-                                  fontSize: 20,
-                                  fontWeight: bold,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(
-                                left: 120,
-                                top: 101,
-                              ),
-                              child: IconButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                    context,
-                                    '/layanan',
-                                  );
-                                },
-                                icon: const Icon(
-                                  Icons.arrow_right_rounded,
-                                ),
-                                iconSize: 48,
-                                color: kCrayolaColor,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/layanan',
-                        );
-                      },
-                    ),
-                  ),
-
                   // INFORMASI ASNAF
                   Padding(
                     padding: const EdgeInsets.only(
                       right: 3,
-                      left: 12,
+                      left: 8,
                     ),
                     child: InkWell(
                       child: Container(
@@ -552,7 +467,7 @@ class _BerandaState extends State<Beranda> {
                                 style: TextStyle(
                                   color: kYankeesColor,
                                   fontSize: 20,
-                                  fontWeight: bold,
+                                  fontWeight: medium,
                                 ),
                               ),
                             ),

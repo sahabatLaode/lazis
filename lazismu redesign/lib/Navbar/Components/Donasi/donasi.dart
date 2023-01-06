@@ -10,20 +10,20 @@ class Donasi extends StatelessWidget {
     return Scaffold(
       backgroundColor: kCulturedColor,
       appBar: AppBar(
+        centerTitle: true,
         automaticallyImplyLeading: false,
-        elevation: 0.5,
-        backgroundColor: kCulturedColor,
+        elevation: 0,
+        backgroundColor: kCrayolaColor,
         title: Text(
           'Donasi',
           style: TextStyle(
-            color: kYankeesColor,
-            fontSize: 22,
+            color: kCulturedColor,
             fontWeight: bold,
           ),
         ),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: kCulturedColor,
-          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: kCrayolaColor,
+          statusBarIconBrightness: Brightness.light,
         ),
       ),
       body: ListView(
