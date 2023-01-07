@@ -49,33 +49,33 @@ class Permintaan extends StatelessWidget {
           ),
 
           // PERMINTAAN AMBULAN
-          InkWell(
-            child: Container(
-              margin: const EdgeInsets.only(
-                left: 16,
-                right: 16,
+          Container(
+            margin: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
+            width: double.infinity,
+            height: 86,
+            decoration: BoxDecoration(
+              color: kCulturedColor,
+              borderRadius: BorderRadius.circular(
+                14,
               ),
-              padding: const EdgeInsets.only(
-                left: 24,
-                right: 12,
-                top: 24,
-                bottom: 24,
-              ),
-              width: double.infinity,
-              height: 86,
-              decoration: BoxDecoration(
-                color: kCulturedColor,
-                borderRadius: BorderRadius.circular(
-                  14,
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 2,
+                  spreadRadius: 1,
                 ),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 2,
-                    spreadRadius: 1,
-                  ),
-                ],
-              ),
+              ],
+            ),
+            child: InkWell(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -115,13 +115,13 @@ class Permintaan extends StatelessWidget {
                   ),
                 ],
               ),
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/permintaan-ambulan',
+                );
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/permintaan-ambulan',
-              );
-            },
           ),
 
           // PERMINTAAN DARAH
@@ -180,33 +180,33 @@ class Permintaan extends StatelessWidget {
           ),
 
           // PERMINTAAN KOIN SURGA
-          InkWell(
-            child: Container(
-              margin: const EdgeInsets.only(
-                left: 24,
-                right: 24,
+          Container(
+            margin: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+            ),
+            padding: const EdgeInsets.only(
+              left: 24,
+              right: 12,
+              top: 24,
+              bottom: 24,
+            ),
+            width: double.infinity,
+            height: 86,
+            decoration: BoxDecoration(
+              color: kCulturedColor,
+              borderRadius: BorderRadius.circular(
+                14,
               ),
-              padding: const EdgeInsets.only(
-                left: 24,
-                right: 12,
-                top: 24,
-                bottom: 24,
-              ),
-              width: double.infinity,
-              height: 86,
-              decoration: BoxDecoration(
-                color: kCulturedColor,
-                borderRadius: BorderRadius.circular(
-                  14,
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 2,
+                  spreadRadius: 1,
                 ),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 2,
-                    spreadRadius: 1,
-                  ),
-                ],
-              ),
+              ],
+            ),
+            child: InkWell(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -246,13 +246,13 @@ class Permintaan extends StatelessWidget {
                   ),
                 ],
               ),
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  '/permintaan-koin',
+                );
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/permintaan-koin',
-              );
-            },
           ),
         ],
       ),

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -48,162 +50,70 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        padding: const EdgeInsets.all(16),
         children: [
-          title(),
-          nama(),
-          alamat(),
-          telepon(),
-          nominal(),
-          metode(),
+          ilustrasi(),
+          titikJemput(),
+          lokasiAntar(),
+          waktuJemput(),
           tombol(),
         ],
       ),
     );
   }
 
-  Widget title() {
-    return Text(
-      'Data :',
-      style: TextStyle(
-        color: kYankeesColor,
-        fontSize: 18,
-        fontWeight: semibold,
+  Widget ilustrasi() {
+    return Center(
+      child: Image.asset(
+        'assets/images/image_permintaan_ambulan.png',
+        width: 250,
       ),
     );
   }
 
-  Widget nama() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: const EdgeInsets.only(top: 12),
-          padding: const EdgeInsets.all(18),
-          decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: kYankees50Color,
-            ),
-          ),
-          child: TextFormField(
-            decoration: InputDecoration.collapsed(
-                hintText: 'Nama',
-                hintStyle: TextStyle(
-                  color: kYankees30Color,
-                  fontSize: 16,
-                )),
-          ),
-        ),
-        if (isShowPasswordError)
-          Container(
-            margin: const EdgeInsets.only(top: 8),
-            child: Text(
-              'Nama tidak boleh kosong',
+  Widget titikJemput() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 16,
+      ),
+      padding: const EdgeInsets.all(16),
+      width: double.infinity,
+      height: 56,
+      decoration: BoxDecoration(
+        color: kLavenderBlushColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: InkWell(
+        child: Row(
+          children: [
+            // JUDUL
+            Text(
+              'Titik Jemput',
               style: TextStyle(
-                color: kRedColor,
+                color: kYankees30Color,
+                fontSize: 16,
               ),
             ),
-          ),
-      ],
-    );
-  }
 
-  Widget alamat() {
-    return Container(
-      margin: const EdgeInsets.only(top: 12),
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-          color: kYankees50Color,
-        ),
-      ),
-      child: TextFormField(
-        keyboardType: TextInputType.streetAddress,
-        decoration: InputDecoration.collapsed(
-            hintText: 'Alamat',
-            hintStyle: TextStyle(
+            const Spacer(),
+
+            // ARAH PANAH
+            Icon(
+              Icons.chevron_right_rounded,
               color: kYankees30Color,
-              fontSize: 16,
-            )),
-      ),
-    );
-  }
-
-  Widget telepon() {
-    return Container(
-      margin: const EdgeInsets.only(top: 12),
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-          color: kYankees50Color,
-        ),
-      ),
-      child: TextFormField(
-        keyboardType: TextInputType.phone,
-        decoration: InputDecoration.collapsed(
-            hintText: 'Nomor Telepon',
-            hintStyle: TextStyle(
-              color: kYankees30Color,
-              fontSize: 16,
-            )),
-      ),
-    );
-  }
-
-  Widget nominal() {
-    return Container(
-      margin: const EdgeInsets.only(top: 12),
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-          color: kYankees50Color,
-        ),
-      ),
-      child: Row(
-        children: [
-          Text(
-            'Rp.',
-            style: TextStyle(
-              color: kYankeesColor,
-              fontSize: 16,
-              fontWeight: semibold,
             ),
-          ),
-          const SizedBox(
-            width: 12,
-          ),
-          Expanded(
-            child: TextFormField(
-              keyboardType: TextInputType.number,
-              autocorrect: false,
-              // obscureText: true,
-              controller: passwordController,
-              // keyboardType: TextInputType.visiblePassword,
-              decoration: InputDecoration.collapsed(
-                hintText: 'Nominal',
-                hintStyle: TextStyle(
-                  color: kYankees30Color,
-                  fontSize: 16,
-                ),
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
+        onTap: () {
+          Navigator.pushNamed(context, '/navbar');
+        },
       ),
     );
   }
 
-  Widget metode() {
+  Widget lokasiAntar() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(top: 16),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -214,8 +124,9 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
           showSelectedItems: true,
         ),
         items: const [
-          "Jemput ke Alamat",
-          "Diantar ke kantor Lazismu Banguntapan Selatan",
+          "Rumah Sakit 1",
+          "Puskesmas 2",
+          "Klinik 3",
         ],
         clearButtonProps: const ClearButtonProps(
           isVisible: true,
@@ -225,16 +136,52 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),
-              borderSide: const BorderSide(),
+              borderSide: BorderSide.none,
             ),
             fillColor: kLavenderBlushColor,
-            labelText: " Metode",
+            labelText: " Lokasi Antar",
             labelStyle: TextStyle(
               color: kYankees30Color,
               fontSize: 16,
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget waktuJemput() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 16,
+      ),
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: kLavenderBlushColor,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: InkWell(
+        child: Row(
+          children: [
+            // JUDUL
+            Text(
+              'Waktu Jemput',
+              style: TextStyle(
+                color: kYankees30Color,
+                fontSize: 16,
+              ),
+            ),
+
+            const Spacer(),
+
+            // IKON KALENDER
+            Icon(
+              Icons.calendar_month_rounded,
+              color: kYankees30Color,
+            ),
+          ],
+        ),
+        onTap: () {},
       ),
     );
   }

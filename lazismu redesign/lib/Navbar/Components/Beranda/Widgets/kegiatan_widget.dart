@@ -25,65 +25,91 @@ class _KegiatanWidgetState extends State<KegiatanWidget> {
           statusBarColor: kCrayolaColor,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(
-          16.0,
-        ),
-        child: ListView(
-          children: [
-            pendidikan(),
-            ekonomi(),
-            kesehatan(),
-          ],
-        ),
+      body: ListView(
+        children: [
+          pendidikan(),
+          ekonomi(),
+          kesehatan(),
+        ],
       ),
     );
   }
 
   Widget pendidikan() {
-    return Row(
-      children: [
-        Container(
-          width: 300,
-          height: 250,
-          padding: const EdgeInsets.only(
-            top: 16,
+    return Container(
+      margin: const EdgeInsets.all(
+        16,
+      ),
+      width: double.infinity,
+      height: 250,
+      decoration: BoxDecoration(
+        color: kCulturedColor,
+        borderRadius: BorderRadius.circular(
+          14,
+        ),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 2,
+            spreadRadius: 1,
           ),
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 2,
-                spreadRadius: 1,
+        ],
+      ),
+      child: InkWell(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // JUDUL
+            Container(
+              margin: const EdgeInsets.only(
+                bottom: 12,
               ),
-            ],
-          ),
-          child: InkWell(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                // ILUSTRASI
-                Image.asset(
-                  'assets/images/image_kegiatan_pendidikan.png',
-                  width: 200,
+              width: 84,
+              height: 32,
+              decoration: BoxDecoration(
+                color: kYankeesColor,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(14),
+                  bottomRight: Radius.circular(14),
                 ),
-                const SizedBox(
-                  height: 16,
+              ),
+              child: Center(
+                child: Text(
+                  'Pendidikan',
+                  style: TextStyle(
+                    color: kCulturedColor,
+                  ),
                 ),
+              ),
+            ),
 
-                // TEKS
+            // ILUSTRASI
+            Center(
+              child: Image.asset(
+                'assets/images/image_kegiatan_pendidikan.png',
+                width: 200,
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+
+            const Spacer(),
+
+            // TEKS
+            Row(
+              children: [
                 Container(
-                  height: 54,
+                  width: 316.7,
+                  height: 44,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
                     color: kCrayolaColor,
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(14),
+                    ),
                   ),
                   child: Center(
                     child: Text(
@@ -95,94 +121,112 @@ class _KegiatanWidgetState extends State<KegiatanWidget> {
                     ),
                   ),
                 ),
+                const Spacer(),
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: kYankeesColor,
+                    borderRadius: const BorderRadius.only(
+                      bottomRight: Radius.circular(14),
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.chevron_right_rounded,
+                    color: kCulturedColor,
+                  ),
+                ),
               ],
             ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
+          ],
         ),
-
-        const Spacer(),
-
-        // TOMBOL PANAH
-        Container(
-          width: 48,
-          height: 250,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: kCrayolaColor,
-              width: 2,
-            ),
-          ),
-          child: InkWell(
-            child: Center(
-              child: Icon(
-                Icons.chevron_right_rounded,
-                size: 32,
-                color: kCrayolaColor,
-              ),
-            ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
-        ),
-      ],
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            '/navbar',
+          );
+        },
+      ),
     );
   }
 
   Widget ekonomi() {
-    return Row(
-      children: [
-        Container(
-          margin: const EdgeInsetsDirectional.only(
-            top: 16,
+    return Container(
+      margin: const EdgeInsets.only(
+        bottom: 16,
+        left: 16,
+        right: 16,
+      ),
+      width: double.infinity,
+      height: 250,
+      decoration: BoxDecoration(
+        color: kCulturedColor,
+        borderRadius: BorderRadius.circular(
+          14,
+        ),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 2,
+            spreadRadius: 1,
           ),
-          width: 300,
-          height: 250,
-          padding: const EdgeInsets.only(
-            top: 16,
-          ),
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 2,
-                spreadRadius: 1,
+        ],
+      ),
+      child: InkWell(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // JUDUL
+            Container(
+              margin: const EdgeInsets.only(
+                bottom: 12,
               ),
-            ],
-          ),
-          child: InkWell(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              width: 84,
+              height: 32,
+              decoration: BoxDecoration(
+                color: kYankeesColor,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(14),
+                  bottomRight: Radius.circular(14),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  'Ekonomi',
+                  style: TextStyle(
+                    color: kCulturedColor,
+                  ),
+                ),
+              ),
+            ),
+
+            // ILUSTRASI
+            Center(
+              child: Image.asset(
+                'assets/images/image_kegiatan_ekonomi.png',
+                width: 240,
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+
+            const Spacer(),
+
+            // TEKS
+            Row(
               children: [
-                Image.asset(
-                  'assets/images/image_kegiatan_ekonomi.png',
-                  width: 240,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
                 Container(
-                  height: 54,
+                  width: 316.7,
+                  height: 44,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
                     color: kCrayolaColor,
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(14),
+                    ),
                   ),
                   child: Center(
                     child: Text(
@@ -194,96 +238,112 @@ class _KegiatanWidgetState extends State<KegiatanWidget> {
                     ),
                   ),
                 ),
+                const Spacer(),
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: kYankeesColor,
+                    borderRadius: const BorderRadius.only(
+                      bottomRight: Radius.circular(14),
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.chevron_right_rounded,
+                    color: kCulturedColor,
+                  ),
+                ),
               ],
             ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
+          ],
         ),
-        const Spacer(),
-
-        // TOMBOL PANAH
-        Container(
-          margin: const EdgeInsets.only(
-            top: 16,
-          ),
-          width: 48,
-          height: 250,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: kCrayolaColor,
-              width: 2,
-            ),
-          ),
-          child: InkWell(
-            child: Center(
-              child: Icon(
-                Icons.chevron_right_rounded,
-                size: 32,
-                color: kCrayolaColor,
-              ),
-            ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
-        ),
-      ],
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            '/navbar',
+          );
+        },
+      ),
     );
   }
 
   Widget kesehatan() {
-    return Row(
-      children: [
-        Container(
-          margin: const EdgeInsetsDirectional.only(
-            top: 16,
+    return Container(
+      margin: const EdgeInsets.only(
+        bottom: 16,
+        left: 16,
+        right: 16,
+      ),
+      width: double.infinity,
+      height: 250,
+      decoration: BoxDecoration(
+        color: kCulturedColor,
+        borderRadius: BorderRadius.circular(
+          14,
+        ),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 2,
+            spreadRadius: 1,
           ),
-          width: 300,
-          height: 250,
-          padding: const EdgeInsets.only(
-            top: 16,
-          ),
-          decoration: BoxDecoration(
-            color: kCulturedColor,
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black12,
-                blurRadius: 2,
-                spreadRadius: 1,
+        ],
+      ),
+      child: InkWell(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // JUDUL
+            Container(
+              margin: const EdgeInsets.only(
+                bottom: 12,
               ),
-            ],
-          ),
-          child: InkWell(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              width: 84,
+              height: 32,
+              decoration: BoxDecoration(
+                color: kYankeesColor,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(14),
+                  bottomRight: Radius.circular(14),
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  'Kesehatan',
+                  style: TextStyle(
+                    color: kCulturedColor,
+                  ),
+                ),
+              ),
+            ),
+
+            // ILUSTRASI
+            Center(
+              child: Image.asset(
+                'assets/images/image_kegiatan_kesehatan.png',
+                width: 200,
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+
+            const Spacer(),
+
+            // TEKS
+            Row(
               children: [
-                Image.asset(
-                  'assets/images/image_kegiatan_kesehatan.png',
-                  width: 220,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
                 Container(
-                  height: 54,
+                  width: 316.7,
+                  height: 44,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                   ),
                   decoration: BoxDecoration(
                     color: kCrayolaColor,
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(14),
+                    ),
                   ),
                   child: Center(
                     child: Text(
@@ -295,49 +355,32 @@ class _KegiatanWidgetState extends State<KegiatanWidget> {
                     ),
                   ),
                 ),
+                const Spacer(),
+                Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: kYankeesColor,
+                    borderRadius: const BorderRadius.only(
+                      bottomRight: Radius.circular(14),
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.chevron_right_rounded,
+                    color: kCulturedColor,
+                  ),
+                ),
               ],
             ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
+          ],
         ),
-        const Spacer(),
-
-        // TOMBOL PANAH
-        Container(
-          margin: const EdgeInsets.only(
-            top: 16,
-          ),
-          width: 48,
-          height: 250,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: kCrayolaColor,
-              width: 2,
-            ),
-          ),
-          child: InkWell(
-            child: Center(
-              child: Icon(
-                Icons.chevron_right_rounded,
-                size: 32,
-                color: kCrayolaColor,
-              ),
-            ),
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                '/navbar',
-              );
-            },
-          ),
-        ),
-      ],
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            '/navbar',
+          );
+        },
+      ),
     );
   }
 }

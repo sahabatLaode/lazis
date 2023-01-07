@@ -62,8 +62,9 @@ class Aktivitas extends StatelessWidget {
                     children: [
                       SizedBox(
                         height: 220,
-                        child:
-                            Image.asset('assets/images/image_no_activity.png'),
+                        child: Image.asset(
+                          'assets/images/image_no_activity.png',
+                        ),
                       ),
                       const SizedBox(
                         height: 48,
@@ -76,7 +77,12 @@ class Aktivitas extends StatelessWidget {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context,
+                            '/donasi-infaq',
+                          );
+                        },
                         child: Text(
                           'Mulai dengan Donasi',
                           style: TextStyle(
@@ -88,38 +94,42 @@ class Aktivitas extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 220,
-                          child: Image.asset(
-                              'assets/images/image_no_activity.png'),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 220,
+                        child: Image.asset(
+                          'assets/images/image_no_activity.png',
                         ),
-                        SizedBox(
-                          height: 48,
+                      ),
+                      const SizedBox(
+                        height: 48,
+                      ),
+                      Text(
+                        'Belum ada aktivitas yang dilakukan.',
+                        style: TextStyle(
+                          color: kYankeesColor,
+                          fontSize: 16,
                         ),
-                        Text(
-                          'Belum ada aktivitas yang dilakukan.',
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context,
+                            '/donasi-infaq',
+                          );
+                        },
+                        child: Text(
+                          'Mulai dengan Donasi',
                           style: TextStyle(
-                            color: kYankeesColor,
+                            color: kBlueColor,
                             fontSize: 16,
+                            fontWeight: bold,
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Mulai dengan Donasi',
-                            style: TextStyle(
-                              color: kBlueColor,
-                              fontSize: 16,
-                              fontWeight: bold,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

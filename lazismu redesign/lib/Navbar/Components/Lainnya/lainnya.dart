@@ -158,7 +158,7 @@ class _LainnyaState extends State<Lainnya> {
             16,
           ),
           width: double.infinity,
-          height: 120,
+          height: 60,
           decoration: BoxDecoration(
             color: kCulturedColor,
             boxShadow: const [
@@ -205,49 +205,49 @@ class _LainnyaState extends State<Lainnya> {
                 },
               ),
 
-              const Spacer(),
+              // const Spacer(),
 
-              Container(
-                width: double.infinity,
-                height: 1,
-                color: kYankees50Color,
-              ),
+              // Container(
+              //   width: double.infinity,
+              //   height: 1,
+              //   color: kYankees50Color,
+              // ),
 
-              const Spacer(),
+              // const Spacer(),
 
-              // MENU BAHASA
-              InkWell(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.abc_rounded,
-                    ),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Text(
-                      'Ganti Bahasa',
-                      style: TextStyle(
-                        color: kYankeesColor,
-                        fontSize: 16,
-                        fontWeight: medium,
-                      ),
-                    ),
-                    const Spacer(),
-                    Icon(
-                      Icons.chevron_right_rounded,
-                      color: kCrayolaColor,
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/navbar',
-                  );
-                },
-              ),
+              // // MENU BAHASA
+              // InkWell(
+              //   child: Row(
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     children: [
+              //       const Icon(
+              //         Icons.abc_rounded,
+              //       ),
+              //       const SizedBox(
+              //         width: 16,
+              //       ),
+              //       Text(
+              //         'Ganti Bahasa',
+              //         style: TextStyle(
+              //           color: kYankeesColor,
+              //           fontSize: 16,
+              //           fontWeight: medium,
+              //         ),
+              //       ),
+              //       const Spacer(),
+              //       Icon(
+              //         Icons.chevron_right_rounded,
+              //         color: kCrayolaColor,
+              //       ),
+              //     ],
+              //   ),
+              //   onTap: () {
+              //     Navigator.pushNamed(
+              //       context,
+              //       '/navbar',
+              //     );
+              //   },
+              // ),
             ],
           ),
         ),
@@ -441,7 +441,7 @@ class _LainnyaState extends State<Lainnya> {
             onPressed: () {
               Navigator.pushReplacementNamed(
                 context,
-                '/navbar',
+                '/sign-in',
               );
             },
             style: TextButton.styleFrom(

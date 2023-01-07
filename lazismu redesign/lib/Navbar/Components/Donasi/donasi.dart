@@ -51,33 +51,33 @@ class Donasi extends StatelessWidget {
               ),
 
               // MENU ZAKAT
-              InkWell(
-                child: Container(
-                  margin: const EdgeInsets.only(
-                    left: 16,
-                    right: 16,
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                ),
+                padding: const EdgeInsets.only(
+                  left: 24,
+                  right: 12,
+                  top: 24,
+                  bottom: 24,
+                ),
+                width: double.infinity,
+                height: 86,
+                decoration: BoxDecoration(
+                  color: kCulturedColor,
+                  borderRadius: BorderRadius.circular(
+                    14,
                   ),
-                  padding: const EdgeInsets.only(
-                    left: 24,
-                    right: 12,
-                    top: 24,
-                    bottom: 24,
-                  ),
-                  width: double.infinity,
-                  height: 86,
-                  decoration: BoxDecoration(
-                    color: kCulturedColor,
-                    borderRadius: BorderRadius.circular(
-                      14,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 2,
+                      spreadRadius: 1,
                     ),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 2,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+                  ],
+                ),
+                child: InkWell(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -128,13 +128,13 @@ class Donasi extends StatelessWidget {
                       ),
                     ],
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/donasi-zakat',
+                    );
+                  },
                 ),
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/donasi-zakat',
-                  );
-                },
               ),
 
               const SizedBox(
@@ -142,33 +142,33 @@ class Donasi extends StatelessWidget {
               ),
 
               // MENU INFAQ/SEDEKAH
-              InkWell(
-                child: Container(
-                  margin: const EdgeInsets.only(
-                    left: 16,
-                    right: 16,
+              Container(
+                margin: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                ),
+                padding: const EdgeInsets.only(
+                  left: 24,
+                  right: 12,
+                  top: 24,
+                  bottom: 24,
+                ),
+                width: double.infinity,
+                height: 86,
+                decoration: BoxDecoration(
+                  color: kCulturedColor,
+                  borderRadius: BorderRadius.circular(
+                    14,
                   ),
-                  padding: const EdgeInsets.only(
-                    left: 24,
-                    right: 12,
-                    top: 24,
-                    bottom: 24,
-                  ),
-                  width: double.infinity,
-                  height: 86,
-                  decoration: BoxDecoration(
-                    color: kCulturedColor,
-                    borderRadius: BorderRadius.circular(
-                      14,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 2,
+                      spreadRadius: 1,
                     ),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 2,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+                  ],
+                ),
+                child: InkWell(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -219,13 +219,13 @@ class Donasi extends StatelessWidget {
                       ),
                     ],
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/donasi-infaq',
+                    );
+                  },
                 ),
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/donasi-infaq',
-                  );
-                },
               ),
             ],
           ),
