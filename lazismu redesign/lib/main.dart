@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:lazismu/Navbar/Components/Beranda/Widgets/asnaf_widget.dart';
-import 'package:lazismu/Navbar/Components/Beranda/Widgets/kegiatan_widget.dart';
-import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_infaq_widget.dart';
-import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_zakat_widget.dart';
-import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_ambulan_widget.dart';
-import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_koin_widget.dart';
+import 'package:lazismu/Navbar/Components/Beranda/Widgets/asnaf.dart';
+import 'package:lazismu/Navbar/Components/Beranda/Widgets/kegiatan.dart';
+import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_infaq.dart';
+import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_zakat.dart';
+import 'package:lazismu/Navbar/Components/Lainnya/Widgets/profil.dart';
+import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_ambulan.dart';
+import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_koin.dart';
 import 'package:lazismu/Onboarding/onboarding.dart';
 import 'package:lazismu/Sign%20In/sign_in.dart';
 import 'package:lazismu/Splashpage/splash_page.dart';
@@ -35,13 +36,14 @@ class MyApp extends StatelessWidget {
         '/forgotpassword': (context) => const ForgotPassword(),
         '/kode-otp': (context) => const KodeOtp(),
         '/reset-password': (context) => const ResetPassword(),
-        '/kegiatan': (context) => const KegiatanWidget(),
-        '/asnaf': (context) => const AsnafWidget(),
+        '/kegiatan': (context) => const Kegiatan(),
+        '/asnaf': (context) => const Asnaf(),
         '/navbar': (context) => const NavbarItem(),
-        '/donasi-zakat': (context) => const DonasiZakatWidget(),
-        '/donasi-infaq': (context) => const DonasiInfaqWidget(),
+        '/donasi-zakat': (context) => const DonasiZakat(),
+        '/donasi-infaq': (context) => const DonasiInfaq(),
         '/permintaan-ambulan': (context) => const PermintaanAmbulanWidget(),
-        '/permintaan-koin': (context) => const PermintaanKoinWidget(),
+        '/permintaan-koin': (context) => const PermintaanKoin(),
+        '/profil': (context) => const Profil(),
       },
     );
   }

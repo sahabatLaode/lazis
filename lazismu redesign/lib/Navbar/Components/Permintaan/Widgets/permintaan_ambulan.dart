@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,9 +25,9 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: kCrayolaColor,
+        backgroundColor: kCulturedColor,
         iconTheme: IconThemeData(
-          color: kCulturedColor,
+          color: kYankeesColor,
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,22 +35,23 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
             Text(
               'Permintaan Ambulan',
               style: TextStyle(
-                color: kCulturedColor,
-                fontSize: 20,
-                fontWeight: semibold,
+                color: kYankeesColor,
+                fontWeight: medium,
               ),
             ),
           ],
         ),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: kCrayolaColor,
-          statusBarIconBrightness: Brightness.light,
+          statusBarColor: kCulturedColor,
+          statusBarIconBrightness: Brightness.dark,
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 24,
+        ),
         children: [
-          ilustrasi(),
           titikJemput(),
           lokasiAntar(),
           waktuJemput(),
@@ -62,26 +61,16 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
     );
   }
 
-  Widget ilustrasi() {
-    return Center(
-      child: Image.asset(
-        'assets/images/image_permintaan_ambulan.png',
-        width: 250,
-      ),
-    );
-  }
-
   Widget titikJemput() {
     return Container(
-      margin: const EdgeInsets.only(
-        top: 16,
-      ),
       padding: const EdgeInsets.all(16),
       width: double.infinity,
       height: 56,
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
+        border: Border.all(
+          color: kYankees30Color,
+        ),
       ),
       child: InkWell(
         child: Row(
@@ -113,7 +102,9 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
 
   Widget lokasiAntar() {
     return Container(
-      margin: const EdgeInsets.only(top: 16),
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -133,10 +124,9 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
         ),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
-            filled: true,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14),
-              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(7),
+              borderSide: const BorderSide(),
             ),
             fillColor: kLavenderBlushColor,
             labelText: " Lokasi Antar",
@@ -153,12 +143,14 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
   Widget waktuJemput() {
     return Container(
       margin: const EdgeInsets.only(
-        top: 16,
+        top: 12,
       ),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
+        border: Border.all(
+          color: kYankees30Color,
+        ),
       ),
       child: InkWell(
         child: Row(
@@ -192,12 +184,13 @@ class _PermintaanAmbulanWidgetState extends State<PermintaanAmbulanWidget> {
       children: [
         // TOMBOL BATALKAN
         Container(
-          margin: const EdgeInsets.only(top: 32),
+          margin: const EdgeInsets.only(
+            top: 32,
+          ),
           width: 170,
           height: 56,
           decoration: BoxDecoration(
             border: Border.all(
-              width: 1,
               color: kCrayolaColor,
             ),
             borderRadius: BorderRadiusDirectional.circular(14),

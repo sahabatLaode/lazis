@@ -93,17 +93,11 @@ class _ResetPasswordPageState extends State<ForgotPassword> {
           margin: const EdgeInsets.only(
             top: 24,
           ),
-          padding: const EdgeInsets.all(
-            18,
-          ),
+          padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
+            borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              width: 1,
-              color: kYankees50Color,
+              color: kYankees30Color,
             ),
           ),
           child: TextFormField(

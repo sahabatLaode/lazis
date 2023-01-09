@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lazismu/theme.dart';
 
-class KegiatanWidget extends StatefulWidget {
-  const KegiatanWidget({super.key});
+class Kegiatan extends StatefulWidget {
+  const Kegiatan({super.key});
 
   @override
-  State<KegiatanWidget> createState() => _KegiatanWidgetState();
+  State<Kegiatan> createState() => _KegiatanState();
 }
 
-class _KegiatanWidgetState extends State<KegiatanWidget> {
+class _KegiatanState extends State<Kegiatan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

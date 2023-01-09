@@ -87,11 +87,9 @@ class _SignUpState extends State<SignUp> {
       margin: const EdgeInsets.only(top: 24),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -110,11 +108,9 @@ class _SignUpState extends State<SignUp> {
       margin: const EdgeInsets.only(top: 12),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -139,11 +135,9 @@ class _SignUpState extends State<SignUp> {
           margin: const EdgeInsets.only(top: 12),
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              width: 1,
-              color: kYankees50Color,
+              color: kYankees30Color,
             ),
           ),
           child: Row(

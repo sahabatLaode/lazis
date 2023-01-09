@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lazismu/theme.dart';
 
-class AsnafWidget extends StatefulWidget {
-  const AsnafWidget({super.key});
+class Asnaf extends StatefulWidget {
+  const Asnaf({super.key});
 
   @override
-  State<AsnafWidget> createState() => _AsnafWidgetState();
+  State<Asnaf> createState() => _AsnafState();
 }
 
-class _AsnafWidgetState extends State<AsnafWidget> {
+class _AsnafState extends State<Asnaf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -208,7 +208,7 @@ class _AsnafWidgetState extends State<AsnafWidget> {
       margin: const EdgeInsets.only(
         bottom: 16,
         left: 16,
-        right: 16, 
+        right: 16,
       ),
       width: double.infinity,
       height: 250,

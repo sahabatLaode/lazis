@@ -18,7 +18,7 @@ class Permintaan extends StatelessWidget {
           'Permintaan',
           style: TextStyle(
             color: kCulturedColor,
-            fontWeight: bold,
+            fontWeight: semibold,
           ),
         ),
         systemOverlayStyle: SystemUiOverlayStyle(

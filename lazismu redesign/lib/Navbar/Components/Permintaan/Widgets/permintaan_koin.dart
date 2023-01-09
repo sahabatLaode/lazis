@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../../theme.dart';
 
-class PermintaanKoinWidget extends StatefulWidget {
-  const PermintaanKoinWidget({super.key});
+class PermintaanKoin extends StatefulWidget {
+  const PermintaanKoin({super.key});
 
   @override
-  State<PermintaanKoinWidget> createState() => _PermintaanKoinWidgetState();
+  State<PermintaanKoin> createState() => _PermintaanKoinState();
 }
 
-class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
+class _PermintaanKoinState extends State<PermintaanKoin> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
 
@@ -24,9 +24,9 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: kCrayolaColor,
+        backgroundColor: kCulturedColor,
         iconTheme: IconThemeData(
-          color: kCulturedColor,
+          color: kYankeesColor,
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,20 +34,22 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
             Text(
               'Permintaan Koin Surga',
               style: TextStyle(
-                color: kCulturedColor,
-                fontSize: 20,
-                fontWeight: semibold,
+                color: kYankeesColor,
+                fontWeight: medium,
               ),
             ),
           ],
         ),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: kCrayolaColor,
-          statusBarIconBrightness: Brightness.light,
+          statusBarColor: kCulturedColor,
+          statusBarIconBrightness: Brightness.dark,
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 24,
+        ),
         children: [
           title(),
           nama(),
@@ -98,13 +100,14 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 12),
+          margin: const EdgeInsets.only(
+            top: 12,
+          ),
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              color: kYankees50Color,
+              color: kYankees30Color,
             ),
           ),
           child: TextFormField(
@@ -118,7 +121,9 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
         ),
         if (isShowPasswordError)
           Container(
-            margin: const EdgeInsets.only(top: 8),
+            margin: const EdgeInsets.only(
+              top: 8,
+            ),
             child: Text(
               'Nama tidak boleh kosong',
               style: TextStyle(
@@ -132,13 +137,14 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
 
   Widget alamat() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -155,13 +161,14 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
 
   Widget telepon() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -178,13 +185,14 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
 
   Widget nominal() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: Row(
@@ -223,7 +231,9 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
 
   Widget metode() {
     return Container(
-      margin: const EdgeInsets.only(top: 12),
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       child: DropdownSearch<String>(
         popupProps: PopupProps.bottomSheet(
           fit: FlexFit.loose,
@@ -242,10 +252,8 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
         ),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
-            filled: true,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14),
-              borderSide: const BorderSide(),
+              borderRadius: BorderRadius.circular(7),
             ),
             fillColor: kLavenderBlushColor,
             labelText: " Metode",
@@ -265,12 +273,13 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
       children: [
         // TOMBOL BATALKAN
         Container(
-          margin: const EdgeInsets.only(top: 32),
+          margin: const EdgeInsets.only(
+            top: 32,
+          ),
           width: 170,
           height: 56,
           decoration: BoxDecoration(
             border: Border.all(
-              width: 1,
               color: kCrayolaColor,
             ),
             borderRadius: BorderRadiusDirectional.circular(14),
@@ -292,7 +301,9 @@ class _PermintaanKoinWidgetState extends State<PermintaanKoinWidget> {
 
         // TOMBOL KONFIRMASI
         Container(
-          margin: const EdgeInsets.only(top: 32),
+          margin: const EdgeInsets.only(
+            top: 32,
+          ),
           width: 170,
           height: 56,
           child: TextButton(

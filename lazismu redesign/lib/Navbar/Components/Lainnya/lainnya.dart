@@ -50,7 +50,7 @@ class _LainnyaState extends State<Lainnya> {
       ),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: kCulturedColor,
+        color: kLavenderBlushColor,
         borderRadius: BorderRadius.circular(14),
         boxShadow: const [
           BoxShadow(
@@ -123,7 +123,7 @@ class _LainnyaState extends State<Lainnya> {
         onTap: () {
           Navigator.pushNamed(
             context,
-            '/navbar',
+            '/profil',
           );
         },
       ),

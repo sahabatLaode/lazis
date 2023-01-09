@@ -84,13 +84,9 @@ class _SignInState extends State<SignIn> {
         18,
       ),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(
-          14,
-        ),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -115,17 +111,11 @@ class _SignInState extends State<SignIn> {
           margin: const EdgeInsets.only(
             top: 12,
           ),
-          padding: const EdgeInsets.all(
-            18,
-          ),
+          padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
+            borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              width: 1,
-              color: kYankees50Color,
+              color: kYankees30Color,
             ),
           ),
           child: Row(
@@ -146,7 +136,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
               Icon(
-                Icons.visibility_outlined,
+                Icons.visibility_off_outlined,
                 color: kYankees30Color,
               ),
             ],
@@ -200,9 +190,7 @@ class _SignInState extends State<SignIn> {
         style: TextButton.styleFrom(
           backgroundColor: kCrayolaColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              14,
-            ),
+            borderRadius: BorderRadius.circular(14),
           ),
         ),
         child: isLoading

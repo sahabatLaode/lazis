@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../../../../theme.dart';
 import 'package:flutter/services.dart';
 
-class DonasiInfaqWidget extends StatefulWidget {
-  const DonasiInfaqWidget({super.key});
+class DonasiZakat extends StatefulWidget {
+  const DonasiZakat({super.key});
 
   @override
-  State<DonasiInfaqWidget> createState() => _DonasiInfaqWidgetState();
+  State<DonasiZakat> createState() => _DonasiZakatState();
 }
 
-class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
+class _DonasiZakatState extends State<DonasiZakat> {
   final emailController = TextEditingController(text: '');
   final passwordController = TextEditingController(text: '');
   final rekeningNumber = '00011122233344';
@@ -33,24 +33,27 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: kCrayolaColor,
+        backgroundColor: kCulturedColor,
         iconTheme: IconThemeData(
-          color: kCulturedColor,
+          color: kYankeesColor,
         ),
         title: Text(
-          'Donasi Infaq/Sedekah',
+          'Donasi Zakat',
           style: TextStyle(
-            color: kCulturedColor,
-            fontWeight: semibold,
+            color: kYankeesColor,
+            fontWeight: medium,
           ),
         ),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: kCrayolaColor,
-          statusBarIconBrightness: Brightness.light,
+          statusBarColor: kCulturedColor,
+          statusBarIconBrightness: Brightness.dark,
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 24,
+        ),
         children: [
           title(),
           nama(),
@@ -102,14 +105,14 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 12),
+          margin: const EdgeInsets.only(
+            top: 12,
+          ),
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: kLavenderBlushColor,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(7),
             border: Border.all(
-              width: 1,
-              color: kYankees50Color,
+              color: kYankees30Color,
             ),
           ),
           child: TextFormField(
@@ -123,7 +126,9 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
         ),
         if (isShowPasswordError)
           Container(
-            margin: const EdgeInsets.only(top: 8),
+            margin: const EdgeInsets.only(
+              top: 8,
+            ),
             child: Text(
               'Nama tidak boleh kosong',
               style: TextStyle(
@@ -140,11 +145,9 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       margin: const EdgeInsets.only(top: 12),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -164,11 +167,9 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       margin: const EdgeInsets.only(top: 12),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: TextFormField(
@@ -188,11 +189,9 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       margin: const EdgeInsets.only(top: 12),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: kLavenderBlushColor,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(7),
         border: Border.all(
-          width: 1,
-          color: kYankees50Color,
+          color: kYankees30Color,
         ),
       ),
       child: Row(
@@ -251,9 +250,8 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
         ),
         dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
-            filled: true,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(),
             ),
             fillColor: kLavenderBlushColor,
@@ -270,8 +268,15 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
 
   Widget nomorRekening() {
     return Container(
-      margin: const EdgeInsets.only(top: 24),
-      padding: const EdgeInsets.only(left: 18, right: 18, top: 18, bottom: 10),
+      margin: const EdgeInsets.only(
+        top: 24,
+      ),
+      padding: const EdgeInsets.only(
+        left: 18,
+        right: 18,
+        top: 18,
+        bottom: 10,
+      ),
       width: double.infinity,
       decoration: BoxDecoration(
         color: kCulturedColor,
@@ -333,7 +338,6 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
                   backgroundColor: kCrayolaColor,
                   padding: const EdgeInsets.all(6),
                   minimumSize: const Size(12.0, 12.0),
-                  // shape: ,
                 ),
                 child: Text(
                   'Salin rekening',
@@ -356,12 +360,13 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
       children: [
         // TOMBOL BATALKAN
         Container(
-          margin: const EdgeInsets.only(top: 32),
+          margin: const EdgeInsets.only(
+            top: 32,
+          ),
           width: 170,
           height: 56,
           decoration: BoxDecoration(
             border: Border.all(
-              width: 1,
               color: kCrayolaColor,
             ),
             borderRadius: BorderRadiusDirectional.circular(14),
@@ -383,7 +388,9 @@ class _DonasiInfaqWidgetState extends State<DonasiInfaqWidget> {
 
         // TOMBOL KONFIRMASI
         Container(
-          margin: const EdgeInsets.only(top: 32),
+          margin: const EdgeInsets.only(
+            top: 32,
+          ),
           width: 170,
           height: 56,
           child: TextButton(
