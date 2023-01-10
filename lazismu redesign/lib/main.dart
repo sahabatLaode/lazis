@@ -4,6 +4,7 @@ import 'package:lazismu/Navbar/Components/Beranda/Widgets/kegiatan.dart';
 import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_infaq.dart';
 import 'package:lazismu/Navbar/Components/Donasi/Widgets/donasi_zakat.dart';
 import 'package:lazismu/Navbar/Components/Lainnya/Widgets/profil.dart';
+import 'package:lazismu/Navbar/Components/Lainnya/Widgets/ubah_kata_sandi.dart';
 import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_ambulan.dart';
 import 'package:lazismu/Navbar/Components/Permintaan/Widgets/permintaan_koin.dart';
 import 'package:lazismu/Onboarding/onboarding.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/permintaan-ambulan': (context) => const PermintaanAmbulanWidget(),
         '/permintaan-koin': (context) => const PermintaanKoin(),
         '/profil': (context) => const Profil(),
+        '/ubah-kata-sandi': (context) => const UbahKataSandi(),
       },
     );
   }

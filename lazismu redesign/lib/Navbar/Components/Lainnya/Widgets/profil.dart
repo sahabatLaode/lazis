@@ -39,87 +39,39 @@ class _ProfilState extends State<Profil> {
           vertical: 24,
         ),
         children: [
-          fotoProfil(),
           namaProfil(),
           emailProfil(),
+          hpProfil(),
+          ttl(),
+          nik(),
+          alamat(),
+          golDarah(),
+          ranting(),
+          tombol(),
         ],
       ),
-    );
-  }
-
-  Widget fotoProfil() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Foto Profil',
-          style: TextStyle(
-            color: kYankeesColor,
-            fontSize: 16,
-            fontWeight: medium,
-          ),
-        ),
-        InkWell(
-          child: Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 12,
-                ),
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: kYankeesColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: Center(
-                  child: Text(
-                    'LM',
-                    style: TextStyle(
-                      color: kCulturedColor,
-                      fontSize: 32,
-                      fontWeight: bold,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Text(
-                'Tambahkan foto',
-                style: TextStyle(
-                  color: kBlueColor,
-                  fontSize: 16,
-                ),
-              ),
-            ],
-          ),
-          onTap: () {},
-        ),
-      ],
     );
   }
 
   Widget namaProfil() {
     return Container(
       margin: const EdgeInsets.only(
-        top: 32,
-      ),
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7),
-        border: Border.all(
-          color: kYankees30Color,
-        ),
+        top: 8,
       ),
       child: TextFormField(
-        decoration: InputDecoration.collapsed(
-            hintText: 'Nama Lengkap',
-            hintStyle: TextStyle(
-              color: kYankees30Color,
-              fontSize: 16,
-            )),
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Nama Lengkap',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
       ),
     );
   }
@@ -129,20 +81,187 @@ class _ProfilState extends State<Profil> {
       margin: const EdgeInsets.only(
         top: 12,
       ),
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7),
-        border: Border.all(
-          color: kYankees30Color,
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Email',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
         ),
       ),
+    );
+  }
+
+  Widget hpProfil() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
       child: TextFormField(
-        decoration: InputDecoration.collapsed(
-            hintText: 'Email',
-            hintStyle: TextStyle(
-              color: kYankees30Color,
-              fontSize: 16,
-            )),
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Nomor HP',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget ttl() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Tanggal Lahir',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget nik() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'NIK',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget alamat() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Alamat',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget golDarah() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Golongan Darah',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget ranting() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 12,
+      ),
+      child: TextFormField(
+        decoration: InputDecoration(
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(7),
+            ),
+          ),
+          contentPadding: const EdgeInsets.all(18),
+          labelText: 'Ranting',
+          labelStyle: TextStyle(
+            color: kYankees30Color,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget tombol() {
+    return Container(
+      margin: const EdgeInsets.symmetric(
+        vertical: 32,
+      ),
+      width: double.infinity,
+      height: 56,
+      child: TextButton(
+        onPressed: () {},
+        style: TextButton.styleFrom(
+          backgroundColor: kCrayolaColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              14,
+            ),
+          ),
+        ),
+        child: Text(
+          'Simpan',
+          style: TextStyle(
+            color: kCulturedColor,
+            fontSize: 18,
+            fontWeight: bold,
+          ),
+        ),
       ),
     );
   }

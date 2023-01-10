@@ -36,6 +36,7 @@ class _LainnyaState extends State<Lainnya> {
           profil(),
           pengaturan(),
           layanan(),
+          tombol(),
         ],
       ),
     );
@@ -60,72 +61,78 @@ class _LainnyaState extends State<Lainnya> {
           ),
         ],
       ),
-      child: InkWell(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Foto profil
-            Container(
-              margin: const EdgeInsets.only(
-                right: 16,
-              ),
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                color: kYankeesColor,
-              ),
-              child: Center(
-                child: Text(
-                  'LM',
-                  style: TextStyle(
-                    color: kCulturedColor,
-                    fontSize: 18,
-                    fontWeight: bold,
-                  ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // NAMA
+              Text(
+                "LM. MA'RIFATUN",
+                style: TextStyle(
+                  color: kYankeesColor,
+                  fontSize: 18,
+                  fontWeight: bold,
                 ),
               ),
-            ),
 
-            // Nama, nomor HP, ranting
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "LM. Ma'rifatun",
-                  style: TextStyle(
-                    color: kYankeesColor,
-                    fontSize: 18,
-                    fontWeight: bold,
-                  ),
-                ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Text(
-                  "Lengkapi Profil",
-                  style: TextStyle(
-                    color: kBlueColor,
-                  ),
-                ),
-              ],
-            ),
+              const SizedBox(
+                height: 8,
+              ),
 
-            const Spacer(),
+              // EMAIL
+              Text(
+                'lazismu111@gmail.com',
+                style: TextStyle(
+                  color: kYankeesColor,
+                  fontSize: 12,
+                ),
+              ),
 
-            // Icon panah
-            Icon(
-              Icons.chevron_right_rounded,
-              color: kYankeesColor,
+              const SizedBox(
+                height: 6,
+              ),
+
+              // NOMOR HP
+              Text(
+                '081234567890',
+                style: TextStyle(
+                  color: kYankeesColor,
+                  fontSize: 12,
+                ),
+              ),
+
+              const SizedBox(
+                height: 8,
+              ),
+
+              // KETERANGAN
+              Text(
+                "Lengkapi Profil",
+                style: TextStyle(
+                  color: kRedColor,
+                  fontSize: 12,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
+          ),
+
+          const Spacer(),
+
+          // Icon panah
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/profil');
+            },
+            icon: Icon(
+              Icons.edit_note_rounded,
+              color: kCrayolaColor,
+              size: 32,
             ),
-          ],
-        ),
-        onTap: () {
-          Navigator.pushNamed(
-            context,
-            '/profil',
-          );
-        },
+          ),
+        ],
       ),
     );
   }
@@ -428,41 +435,42 @@ class _LainnyaState extends State<Lainnya> {
             ],
           ),
         ),
+      ],
+    );
+  }
 
-        // TOMBOL SIGN OUT
-        Container(
-          margin: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 32,
-          ),
-          width: double.infinity,
-          height: 56,
-          child: TextButton(
-            onPressed: () {
-              Navigator.pushReplacementNamed(
-                context,
-                '/sign-in',
-              );
-            },
-            style: TextButton.styleFrom(
-              backgroundColor: kCrayolaColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  14,
-                ),
-              ),
-            ),
-            child: Text(
-              'Keluar',
-              style: TextStyle(
-                color: kCulturedColor,
-                fontSize: 18,
-                fontWeight: bold,
-              ),
+  Widget tombol() {
+    return Container(
+      margin: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 32,
+      ),
+      width: double.infinity,
+      height: 56,
+      child: TextButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(
+            context,
+            '/sign-in',
+          );
+        },
+        style: TextButton.styleFrom(
+          backgroundColor: kCrayolaColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              14,
             ),
           ),
         ),
-      ],
+        child: Text(
+          'Keluar',
+          style: TextStyle(
+            color: kCulturedColor,
+            fontSize: 18,
+            fontWeight: bold,
+          ),
+        ),
+      ),
     );
   }
 }
